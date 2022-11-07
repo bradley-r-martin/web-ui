@@ -1,0 +1,51 @@
+name: publish Node.js Package
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+      - run: yarn install
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+          registry-url: https://npm.pkg.github.com/
+          scope: '@bradley-r-martin'
+      - run: HUSKY=0 yarn install
+      - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
+      - run: HUSKY=0 yarn version --minor
+      - run: HUSKY=0 yarn build
+      - run: HUSKY=0 git push --tags && git push
+      - run: HUSKY=0 yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  publish-storybook:
+    needs: publish-gpr
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generate
+        run: |
+          HUSKY=0 yarn install
+          HUSKY=0 yarn storybook:build
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: dist-storybook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

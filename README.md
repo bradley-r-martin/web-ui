@@ -1,10 +1,10 @@
 <br />
 <div align="center">
-  <h3 align="center">LaravelBridge - React</h3>
+  <h3 align="center">WebUI</h3>
   <p align="center">
-    Connecting Laravel with React.
+    Collection of Web UI Elements
     <br />
-    <a href="https://bradley-r-martin.github.io/laravel-bridge-react"><strong>Explore Storybook »</strong></a>
+    <a href="https://bradley-r-martin.github.io/web-ui"><strong>Explore Storybook »</strong></a>
     <br />
     <br />
   </p>
@@ -20,11 +20,11 @@ To get a local copy up and running follow these simple example steps.
 Yarn
 
 ```sh
-yarn add @bradley-r-martin/laravel-bridge-react@latest
+yarn add @bradley-r-martin/web-ui@latest
 ```
 
 NPM
 
 ```sh
-npm i @bradley-r-martin/laravel-bridge-react@latest
+npm i @bradley-r-martin/web-ui@latest
 ```

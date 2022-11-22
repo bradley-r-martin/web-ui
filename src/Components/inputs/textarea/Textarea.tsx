@@ -1,23 +1,36 @@
 import { TextareaFunctions, TextareaProps } from './Textarea.Definition'
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, useRef } from 'react'
 
-import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
+import { styleMap } from './Textarea.Styles'
 
 const Textarea: React.ForwardRefRenderFunction<TextareaFunctions, TextareaProps> = (
   props: TextareaProps,
   ref,
 ) => {
-  const { disabled, inherit, ...native } = props
+  const { ...native } = props
 
-  const { isDisabled, enable, disable } = useDisabled({ disabled, inherit })
+  const inputRef = useRef<HTMLTextAreaElement>(null)
 
-  const words = () => {
-    return 8
+  function focus() {
+    inputRef.current?.focus()
   }
 
-  useImperativeHandle(ref, () => ({ enable, disable, words }))
+  useImperativeHandle(ref, () => ({ focus }))
 
-  return <textarea disabled={isDisabled} {...native} />
+  const classnames = styleMap(props)
+
+  return (
+    <textarea
+      ref={inputRef}
+      className={classnames.input}
+      style={{
+        minHeight: 100,
+        maxHeight: 400,
+        height: '100%',
+      }}
+      {...native}
+    />
+  )
 }
 
 export default forwardRef(Textarea)

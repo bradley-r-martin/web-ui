@@ -1,10 +1,10 @@
+import Date from './Date'
 import { HasEnhancers } from '../../../Traits/HasEnhancers'
 import { HasVariants } from '../../../Traits/HasVariants'
 import React from 'react'
-import Textbox from './Textbox'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface TextboxProps
+export interface DateProps
   extends Omit<React.HTMLProps<HTMLInputElement>, 'ref'>,
     HasEnhancers,
     HasVariants {
@@ -12,6 +12,6 @@ export interface TextboxProps
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface TextboxFunctions {}
+export interface DateFunctions {}
 
-export type TextboxReference = React.ElementRef<typeof Textbox>
+export type DateReference = React.ElementRef<typeof Date>

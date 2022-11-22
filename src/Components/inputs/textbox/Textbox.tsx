@@ -1,19 +1,27 @@
 import { TextboxFunctions, TextboxProps } from './Textbox.Definition'
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
-import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
+import { styleMap } from './Textbox.Styles'
 
 const Textbox: React.ForwardRefRenderFunction<TextboxFunctions, TextboxProps> = (
   props: TextboxProps,
   ref,
 ) => {
-  const { disabled, inherit, ...native } = props
+  const { className, ...native } = props
 
-  const { isDisabled, enable, disable } = useDisabled({ disabled, inherit })
+  const inputRef = useRef<HTMLInputElement>(null)
 
-  useImperativeHandle(ref, () => ({ enable, disable }))
+  function focus() {
+    inputRef.current?.focus()
+  }
 
-  return <input type='text' disabled={isDisabled} {...native} />
+  useImperativeHandle(ref, () => ({ focus }))
+
+  const classnames = styleMap(props)
+
+  return (
+    <input ref={inputRef} type='text' className={`${classnames.input} ${className}`} {...native} />
+  )
 }
 
 export default forwardRef(Textbox)

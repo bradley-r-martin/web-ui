@@ -1,28 +1,41 @@
 import { FieldFunctions, FieldProps } from './Field.Definition'
-import { Ref, forwardRef, useId, useImperativeHandle, useRef } from 'react'
+import { InputFunctions, InputProps } from '../inputs/Input.Definition'
+import { forwardRef, useId, useImperativeHandle, useRef } from 'react'
 
+import Exception from '../exception/Exception'
 import Input from '../inputs/Input'
-import { InputReference } from '../inputs/Input.Definition'
 import Label from '../label/Label'
-import { LabelReference } from '../label/Label.Definition'
+import { LabelFunctions } from '../label/Label.Definition'
+import { useDisabled } from '../../Hooks/useDisabled/useDisabled'
 
 const Field: React.ForwardRefRenderFunction<FieldFunctions, FieldProps> = (
   props: FieldProps,
   ref,
 ) => {
-  const { label } = props
+  const { label, description, disabled, ...native } = props
 
-  const labelRef = useRef<LabelReference>(null)
-  const inputRef = useRef<InputReference>(null)
+  const labelRef = useRef<LabelFunctions>(null)
+  const inputRef = useRef<InputFunctions>(null)
   const id = useId()
-  useImperativeHandle(ref, () => ({}))
+
+  const { isDisabled, enable, disable } = useDisabled({ disabled })
+
+  useImperativeHandle(ref, () => ({
+    input: inputRef.current,
+    label: labelRef.current,
+    enable,
+    disable,
+  }))
 
   return (
     <>
-      <Label htmlFor={id} ref={labelRef}>
+      <Label htmlFor={id} ref={labelRef} disabled={isDisabled} description={description}>
         {label}
       </Label>
-      <Input type='textbox' ref={inputRef} />
+      <div>
+        <Input id={id} ref={inputRef} disabled={isDisabled} {...(native as InputProps)} />
+        {/* <Exception /> */}
+      </div>
     </>
   )
 }

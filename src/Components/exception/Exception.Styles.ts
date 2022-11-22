@@ -8,9 +8,7 @@ export const styles = {
   },
 }
 
-export function styleMap(props: any) {
-  const { isDisabled } = props
-
+export function styleMap() {
   return {
     component: classNames({
       [styles.component.inline]: true,

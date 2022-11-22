@@ -1,5 +1,4 @@
 import { ButtonFunctions, ButtonProps } from './Button.Definition'
-import { CheckCircleIcon, CheckIcon } from '@heroicons/react/24/outline'
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 
 import Conditional from '../conditional/Conditional'
@@ -21,7 +20,6 @@ const Button: React.ForwardRefRenderFunction<ButtonFunctions, ButtonProps> = (
     loading = false,
     disabled = false,
     onClick,
-    ...native
   } = props
   const isLoading = loading
   const isDisabled = disabled

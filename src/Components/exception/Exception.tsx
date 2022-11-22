@@ -8,11 +8,11 @@ const Exception: React.ForwardRefRenderFunction<ExceptionFunctions, ExceptionPro
   props: ExceptionProps,
   ref,
 ) => {
-  const { children, ...native } = props
+  const { children } = props
 
   useImperativeHandle(ref, () => ({}))
 
-  const classnames = styleMap({})
+  const classnames = styleMap()
 
   return (
     <span className={classnames.component}>

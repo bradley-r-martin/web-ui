@@ -1,0 +1,489 @@
+<!-- Badge.stories.mdx -->
+
+import {
+  ArrowPathIcon,
+  ArrowUpCircleIcon,
+  CheckIcon,
+  MagnifyingGlassIcon,
+  XMarkIcon,
+  ChevronDoubleRightIcon,
+  ClipboardDocumentIcon,
+  ChevronDownIcon,
+  CircleStackIcon,
+} from '@heroicons/react/24/outline'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import Button from '../Components/button/Button'
+
+<Meta title='Components/Button' argTypes={{}} component={Button} />
+
+# Button
+
+Let's define a story for our `Badge` component
+
+```javascript
+import { Button } from '@bradley-r-martin/web-ui'
+```
+
+## Intents
+
+<div className='grid grid-cols-2 gap-2 bg-gray-100 p-2 rounded'>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='default'>Default</Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Default is used where no intention can be determined.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='primary'>Primary</Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `primary` variant to indicate the action is the primary action to take in this area.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='secondary'>Secondary</Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `secondary` variant in conjunction with a `primary` variant to indicate the action is
+      secondary.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='consumptive'>Consumptive</Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `consumptive` variant to indicate when the action associated will consume/transform
+      something.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='constructive'>Constructive</Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `constructive` variant to indicate when the action associated will create something
+      new.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='destructive'>Destructive</Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `destructive` variant to indicate when the action associated will destory or remove
+      something.
+    </div>
+  </div>
+</div>
+
+<Canvas>
+  <div className='grid grid-cols-6 gap-4'>
+    <Button intent='default'>Default</Button>
+    <Button intent='primary'>Primary</Button>
+    <Button intent='secondary'>Secondary</Button>
+    <Button intent='consumptive'>Consumptive</Button>
+    <Button intent='constructive'>Constructive</Button>
+    <Button intent='destructive'>Destructive</Button>
+  </div>
+</Canvas>
+
+## Variants
+
+<div className='grid grid-cols-3 gap-2 bg-gray-100 p-2 rounded'>
+  <div className='flex flex-col items-start space-y-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='secondary' variant='filled'>
+        Filled
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Default is used where no intention can be determined.
+    </div>
+  </div>
+  <div className='flex flex-col items-start space-y-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='primary' variant='outlined'>
+        Outlined
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `primary` variant to indicate the action is the primary action to take in this area.
+    </div>
+  </div>
+  <div className='flex flex-col items-start space-y-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='constructive' variant='transparent'>
+        Transparent
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `primary` variant to indicate the action is the primary action to take in this area.
+    </div>
+  </div>
+</div>
+
+<Canvas>
+  <div className='grid grid-cols-6 gap-4'>
+    <Button intent='default' variant='outlined'>
+      Default
+    </Button>
+    <Button intent='primary' variant='outlined'>
+      Primary
+    </Button>
+    <Button intent='secondary' variant='outlined'>
+      Secondary
+    </Button>
+    <Button intent='consumptive' variant='outlined'>
+      Consumptive
+    </Button>
+    <Button intent='constructive' variant='outlined'>
+      Constructive
+    </Button>
+    <Button intent='destructive' variant='outlined'>
+      Destructive
+    </Button>
+    <Button intent='default' variant='transparent'>
+      Default
+    </Button>
+    <Button intent='primary' variant='transparent'>
+      Primary
+    </Button>
+    <Button intent='secondary' variant='transparent'>
+      Secondary
+    </Button>
+    <Button intent='consumptive' variant='transparent'>
+      Consumptive
+    </Button>
+    <Button intent='constructive' variant='transparent'>
+      Constructive
+    </Button>
+    <Button intent='destructive' variant='transparent'>
+      Destructive
+    </Button>
+  </div>
+</Canvas>
+
+## Interactability
+
+<div className='grid grid-cols-3 gap-2 bg-gray-100 p-2 rounded'>
+  <div className='flex flex-col items-start space-y-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='primary' variant='filled' loading>
+        Loading
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Loading is used to indicate that the action you took is working and to wait.
+    </div>
+  </div>
+  <div className='flex flex-col items-start space-y-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='secondary' variant='filled' disabled>
+        Disabled
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `disabled` attribute to prevent an action from firing and indicate that it cannot be
+      used.
+    </div>
+  </div>
+  <div className='flex flex-col items-start space-y-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button intent='constructive' variant='outlined' selected>
+        Selected
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      The `selected` attribute can be used to show that this item was selected from a group of
+      items.
+    </div>
+  </div>
+</div>
+
+<Canvas>
+  <div className='grid grid-cols-3 gap-4'>
+    <Button intent='primary' loading variant='outlined'>
+      Loading
+    </Button>
+    <Button intent='default' variant='outlined' selected>
+      Selected
+    </Button>
+    <Button intent='default' variant='outlined' disabled>
+      Disabled
+    </Button>
+  </div>
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <div className='flex flex-col space-y-8'>
+    <div className='flex items-center flex-1'>
+      <div className='w-32'>XS</div>
+      <div className='grid grid-cols-3 gap-4 flex-1'>
+        <Button intent='default' variant='filled' size='xs'>
+          Filled
+        </Button>
+        <Button intent='default' variant='outlined' size='xs'>
+          Outlined
+        </Button>
+        <Button intent='default' variant='transparent' size='xs'>
+          Transparent
+        </Button>
+      </div>
+    </div>
+    <div className='flex items-center flex-1'>
+      <div className='w-32'>SM</div>
+      <div className='grid grid-cols-3 gap-4 flex-1'>
+        <Button intent='primary' variant='filled' size='sm'>
+          Filled
+        </Button>
+        <Button intent='primary' variant='outlined' size='sm'>
+          Outlined
+        </Button>
+        <Button intent='primary' variant='transparent' size='sm'>
+          Transparent
+        </Button>
+      </div>
+    </div>
+    <div className='flex items-center flex-1'>
+      <div className='w-32'>MD</div>
+      <div className='grid grid-cols-3 gap-4 flex-1'>
+        <Button intent='secondary' variant='filled' size='md'>
+          Filled
+        </Button>
+        <Button intent='secondary' variant='outlined' size='md'>
+          Outlined
+        </Button>
+        <Button intent='secondary' variant='transparent' size='md'>
+          Transparent
+        </Button>
+      </div>
+    </div>
+    <div className='flex items-center flex-1'>
+      <div className='w-32'>LG</div>
+      <div className='grid grid-cols-3 gap-4 flex-1'>
+        <Button intent='consumptive' variant='filled' size='lg'>
+          Filled
+        </Button>
+        <Button intent='consumptive' variant='outlined' size='lg'>
+          Outlined
+        </Button>
+        <Button intent='consumptive' variant='transparent' size='lg'>
+          Transparent
+        </Button>
+      </div>
+    </div>
+    <div className='flex items-center flex-1'>
+      <div className='w-32'>XL</div>
+      <div className='grid grid-cols-3 gap-4 flex-1'>
+        <Button intent='constructive' variant='filled' size='xl'>
+          Filled
+        </Button>
+        <Button intent='constructive' variant='outlined' size='xl'>
+          Outlined
+        </Button>
+        <Button intent='constructive' variant='transparent' size='xl'>
+          Transparent
+        </Button>
+      </div>
+    </div>
+  </div>
+</Canvas>
+
+## Shapes
+
+<div className="bg-gray-100 rounded-xl p-8 flex space-x-8">
+  <div className='h-64 w-64 rounded-full bg-white flex items-center justify-center relative uppercase text-slate-400 flex-shrink-0'>
+    <div className='absolute top-10 left-0'>
+      <Button intent='destructive' variant='filled' size='lg' shape='circle'>
+        <XMarkIcon className='h-4 w-4' />
+      </Button>
+    </div>
+    <div className='absolute bottom-14 right-0'>
+      <Button intent='default' variant='outlined' size='sm' shape='circle'>
+        <CircleStackIcon className='h-4 w-4' />
+      </Button>
+    </div>
+    <div className='absolute bottom-5 right-3/4'>
+      <Button intent='constructive' variant='filled' size='lg' shape='circle'>
+        <CheckIcon className='h-4 w-4' />
+      </Button>
+    </div>
+    circle
+  </div>
+
+  <div className='w-full rounded-full bg-white flex items-center justify-center relative uppercase text-slate-400'>
+    <div className='absolute top-5 left-0'>
+      <Button intent='primary' variant='filled' size='lg' shape='pill'>
+        <CheckIcon className='h-4 w-4 mr-2' /> Verified
+      </Button>
+    </div>
+    <div className='absolute top-16 left-52'>
+      <Button intent='secondary' variant='outlined' size='lg' shape='pill'>
+        Outlined pill
+      </Button>
+    </div>
+      <div className='absolute top-44 left-10'>
+      <Button intent='destructive' variant='filled' size='xs' shape='pill'>
+        Smaller pill
+      </Button>
+    </div>
+    <div className='absolute top-44 right-10'>
+      <Button intent='constructive' variant='filled' size='lg' shape='square'>
+        Approve
+      </Button>
+    </div>
+      <div className='absolute top-40 right-56'>
+      <Button intent='consumptive' variant='filled' size='sm' shape='square'>
+        Reject
+      </Button>
+    </div>
+      <div className='absolute top-5 right-24'>
+      <Button intent='destructive' variant='outlined' size='sm' shape='square'>
+        Cancel
+      </Button>
+    </div>
+    <div className="w-1/2 text-center">pill</div>
+    <div className="w-1/2 text-center">square</div>
+  </div>
+</div>
+
+<Canvas>
+  <div className='grid grid-cols-3 gap-8'>
+    <Button intent='primary' variant='filled' shape='pill'>
+      pill
+    </Button>
+    <Button intent='secondary' variant='outlined' shape='square'>
+      square
+    </Button>
+    <div className='flex items-center justify-center'>
+      <div className='flex items-center justify-center p-2 space-x-4 bg-gray-100 rounded-lg w-full'>
+        <div style={{ fontSize: 12 }}>Circle</div>
+        <div>
+          <Button intent='destructive' variant='outlined' size='xs' shape='circle'>
+            <XMarkIcon className='h-4 w-4' />
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Canvas>
+
+## Enhancers
+
+<div className='grid grid-cols-2 gap-2 bg-gray-100 p-2 rounded'>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button
+        intent='secondary'
+        variant='filled'
+        enhancers={{ left: () => <ChevronDoubleRightIcon className='h-4 w-4' /> }}
+      >
+        Left
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Default is used where no intention can be determined.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button
+        intent='primary'
+        variant='filled'
+        enhancers={{
+          right: () => <MagnifyingGlassIcon className='h-4 w-4' />,
+        }}
+      >
+        Right
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `primary` variant to indicate the action is the primary action to take in this area.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button
+        intent='constructive'
+        variant='filled'
+        enhancers={{ top: () => <MagnifyingGlassIcon className='h-6 w-6 mb-2' /> }}
+      >
+        Top
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `primary` variant to indicate the action is the primary action to take in this area.
+    </div>
+  </div>
+  <div className='flex items-start space-x-4 bg-white p-4 rounded'>
+    <div className='w-32 flex flex-shrink-0'>
+      <Button
+        intent='destructive'
+        variant='filled'
+        enhancers={{ bottom: () => <MagnifyingGlassIcon className='h-6 w-6 mt-2' /> }}
+      >
+        Bottom
+      </Button>
+    </div>
+    <div className='text-slate-600' style={{ fontSize: 12 }}>
+      Use the `primary` variant to indicate the action is the primary action to take in this area.
+    </div>
+  </div>
+</div>
+
+<Canvas>
+  <div className='grid grid-cols-6 gap-4'>
+    <div>
+      <Button
+        intent='primary'
+        enhancers={{ left: () => <MagnifyingGlassIcon className='h-4 w-4' /> }}
+      >
+        Left icon
+      </Button>
+    </div>
+    <div>
+      <Button
+        intent='primary'
+        enhancers={{ right: () => <MagnifyingGlassIcon className='h-4 w-4' /> }}
+      >
+        Right icon
+      </Button>
+    </div>
+    <div>
+      <Button
+        intent='primary'
+        enhancers={{
+          top: () => (
+            <div className='pb-2'>
+              <MagnifyingGlassIcon className='h-8 w-8' />
+            </div>
+          ),
+        }}
+      >
+        Top icon
+      </Button>
+    </div>
+    <div>
+      <Button
+        intent='primary'
+        enhancers={{
+          bottom: () => (
+            <div className='pt-2'>
+              <MagnifyingGlassIcon className='h-8 w-8' />
+            </div>
+          ),
+        }}
+      >
+        Top icon
+      </Button>
+    </div>
+  </div>
+</Canvas>

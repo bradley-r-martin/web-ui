@@ -1127,6 +1127,13 @@
   dependencies:
     regenerator-runtime "^0.13.10"
 
+"@babel/runtime@^7.1.2":
+  version "7.20.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.1.tgz#1148bb33ab252b165a06698fde7576092a78b4a9"
+  integrity sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==
+  dependencies:
+    regenerator-runtime "^0.13.10"
+
 "@babel/runtime@~7.5.4":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
@@ -1354,10 +1361,10 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@heroicons/react@^2.0.12":
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.0.12.tgz#7e5a16c82512f89a30266dd36f8b8465b3e3e216"
-  integrity sha512-FZxKh3i9aKIDxyALTgIpSF2t6V6/eZfF5mRu41QlwkX3Oxzecdm1u6dpft6PQGxIBwO7TKYWaMAYYL8mp/EaOg==
+"@heroicons/react@^2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.0.13.tgz#9b1cc54ff77d6625c9565efdce0054a4bcd9074c"
+  integrity sha512-iSN5XwmagrnirWlYEWNPdCDj9aRYVD/lnK3JlsC9/+fqGF80k8C7rl+1HCvBX0dBoagKqOFBs6fMhJJ1hOg1EQ==
 
 "@humanwhocodes/config-array@^0.11.6":
   version "0.11.7"
@@ -2839,6 +2846,11 @@
   integrity sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==
   dependencies:
     "@types/react" "*"
+
+"@types/react-speech-recognition@^3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@types/react-speech-recognition/-/react-speech-recognition-3.9.0.tgz#645e5de99c0837cc928b607979cc6c66a01e64c3"
+  integrity sha512-GstxYfAs4kFPPTQ3p2RU2NmRni5CnxUCHPioq4UytitootYa7iA4aEvXEXHH7S330kMcBY1MuhJ6CV696++0PQ==
 
 "@types/react@*", "@types/react@^18.0.17":
   version "18.0.21"
@@ -4397,6 +4409,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 clean-css@^4.2.3:
   version "4.2.4"
@@ -9500,6 +9517,13 @@ react-merge-refs@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
+react-multi-ref@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-multi-ref/-/react-multi-ref-1.0.1.tgz#d762a064ef3b91e66fa19c8aa917c1e7cce0bc6c"
+  integrity sha512-zgQKmduv95vtXIkze6583pRW7Y+mNj7R0bYgxIRWOrsEfxBQaK+MZ6yjTiZ/qcFV4bYGM74nE9isb+YRBNIw2g==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
@@ -9509,6 +9533,11 @@ react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
+
+react-speech-recognition@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/react-speech-recognition/-/react-speech-recognition-3.10.0.tgz#7aa43bb28d78b92671864dabba3a70489ccad27b"
+  integrity sha512-EVSr4Ik8l9urwdPiK2r0+ADrLyDDrjB0qBRdUWO+w2MfwEBrj6NuRmy1GD3x7BU/V6/hab0pl8Lupen0zwlJyw==
 
 react@^18.2.0:
   version "18.2.0"

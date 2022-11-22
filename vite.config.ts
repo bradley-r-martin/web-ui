@@ -3,7 +3,6 @@ import { dirname } from 'path'
 import dts from 'vite-plugin-dts'
 import { fileURLToPath } from 'url'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)

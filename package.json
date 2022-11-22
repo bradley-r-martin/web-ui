@@ -28,7 +28,7 @@
     "prepare": "husky install",
     "postversion": "git push && git push --tags",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -o dist-storybook -s ./src/stories/assets"
+    "storybook:build": "build-storybook -o dist-storybook"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",

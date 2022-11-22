@@ -1,6 +1,5 @@
 import { InputProps } from '../inputs/Input.Definition'
 import { LabelProps } from '../label/Label.Definition'
-import React from 'react'
 import { UseDisabledFunctions } from '../../Hooks/useDisabled/useDisabled.Definition'
 
 export type FieldProps = InputProps & {

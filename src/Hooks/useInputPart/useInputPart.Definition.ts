@@ -3,6 +3,7 @@ import React from 'react'
 export interface UseInputPartProps {
   parts: React.HTMLProps<HTMLInputElement> &
     {
+      onChange: any
       // any input prop
       name: string
       value: string

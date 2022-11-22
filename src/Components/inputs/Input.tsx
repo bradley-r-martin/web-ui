@@ -1,19 +1,11 @@
 import { DateFunctions, DateProps } from './date/Date.Definition'
 import { InputFunctions, InputProps } from './Input.Definition'
-<<<<<<< Updated upstream
-import React, { ForwardedRef, forwardRef } from 'react'
-=======
 import React, { ForwardedRef, forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { TextareaFunctions, TextareaProps } from './textarea/Textarea.Definition'
 import { TextboxFunctions, TextboxProps } from './textbox/Textbox.Definition'
->>>>>>> Stashed changes
 
 import Date from './date/Date'
 import Textarea from './textarea/Textarea'
-<<<<<<< Updated upstream
-import { TextareaFunctions, TextareaProps } from './textarea/Textarea.Definition'
-=======
->>>>>>> Stashed changes
 import Textbox from './textbox/Textbox'
 import { styleMap } from './Input.Styles'
 import { useDisabled } from '../../Hooks/useDisabled/useDisabled'
@@ -26,23 +18,13 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
 ) => {
   const { type, ...native } = props
 
-<<<<<<< Updated upstream
-  switch (type) {
-    case 'textbox':
-      return <Textbox ref={ref} {...(native as TextboxProps)} />
-    case 'textarea' :
-      return <Textarea ref={ref as ForwardedRef<TextareaFunctions>} {...(native as TextareaProps)} />
-    default:
-      return <>Unknown input type</>
-=======
-  const { enhancers, disabled, inherit, variant } = props
+  const { enhancers, disabled, inherit } = props
 
-  const inputRef = useRef(null)
+  const inputRef = useRef<any>()
 
   function focus() {
     // something
     inputRef?.current?.focus()
->>>>>>> Stashed changes
   }
 
   const [value, setValue] = useState('')

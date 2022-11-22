@@ -26,7 +26,7 @@ export default defineConfig({
       fileName: '[name]',
     },
     rollupOptions: {
-      input: ['./src/index.ts', './src/components/button/Button.tsx'],
+      input: ['./src/index.ts', './src/Components/button/Button.tsx'],
       // make sure to externalize deps that shouldn't be bundled
       // into your library
       external: ['react', 'react-dom', 'styled-components'],

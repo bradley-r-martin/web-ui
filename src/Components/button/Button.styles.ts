@@ -4,7 +4,7 @@ export const base = {}
 
 const styles = {
   button: {
-    base: 'relative outline-none  flex items-center justify-center flex-grow space-x-3 font-semibold text-xs no-underline transition ease-in-out duration-200 select-none',
+    base: 'relative outline-none flex items-center justify-center space-x-3 font-semibold text-xs no-underline transition ease-in-out duration-200 select-none',
     interactability: {
       selected: ' cursor-default pointer-events-none ring-1 ring-inset',
       loading: 'brightness-75 cursor-default pointer-events-none',

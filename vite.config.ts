@@ -1,5 +1,6 @@
+import { dirname, resolve } from 'path'
+
 import { defineConfig } from 'vite'
-import { dirname } from 'path'
 import dts from 'vite-plugin-dts'
 import { fileURLToPath } from 'url'
 import react from '@vitejs/plugin-react'
@@ -17,15 +18,14 @@ export default defineConfig({
     }),
   ],
   build: {
-    emptyOutDir: false,
-    outDir: 'dist',
-    sourcemap: true,
     lib: {
-      formats: ['es', 'cjs'],
-      fileName: '[name]',
+      // Could also be a dictionary or array of multiple entry points
+      entry: resolve(__dirname, 'src/expose.ts'),
+      name: 'WebUI',
+      formats: ['es', 'umd'],
+      fileName: 'web-ui',
     },
     rollupOptions: {
-      input: ['./src/index.ts', './src/Components/button/Button.tsx'],
       // make sure to externalize deps that shouldn't be bundled
       // into your library
       external: ['react', 'react-dom', 'styled-components'],

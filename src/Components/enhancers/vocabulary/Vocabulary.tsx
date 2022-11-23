@@ -1,4 +1,5 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
+
 import { UseVocabularyFunctions } from '../../../Hooks/useVocabulary/useVocabulary.Definition'
 
 type VocabularyProps = UseVocabularyFunctions

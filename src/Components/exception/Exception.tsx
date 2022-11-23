@@ -1,5 +1,5 @@
 import { ExceptionFunctions, ExceptionProps } from './Exception.Definition'
-import { forwardRef, useImperativeHandle } from 'react'
+import React, { forwardRef, useImperativeHandle } from 'react'
 
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline'
 import { styleMap } from './Exception.Styles'

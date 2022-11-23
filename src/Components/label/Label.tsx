@@ -1,5 +1,5 @@
 import { LabelFunctions, LabelProps } from './Label.Definition'
-import { forwardRef, useImperativeHandle } from 'react'
+import React, { forwardRef, useImperativeHandle } from 'react'
 
 import { styleMap } from './Label.Styles'
 import { useDisabled } from '../../Hooks/useDisabled/useDisabled'

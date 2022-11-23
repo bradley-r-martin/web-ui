@@ -17,4 +17,9 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
+  viteFinal: (config, { configType }) => {
+    config.base = '/web-ui/'
+
+    return config
+  },
 }

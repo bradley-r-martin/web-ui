@@ -1,5 +1,5 @@
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { TextareaFunctions, TextareaProps } from './Textarea.Definition'
-import { forwardRef, useImperativeHandle, useRef } from 'react'
 
 import { styleMap } from './Textarea.Styles'
 

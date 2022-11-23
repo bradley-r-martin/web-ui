@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from 'react'
+import React, { FunctionComponent, useEffect, useState } from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 import Button from '../../button/Button'

@@ -1,5 +1,5 @@
 import { FieldsetFunctions, FieldsetProps } from './Fieldset.Definition'
-import { forwardRef, useImperativeHandle } from 'react'
+import React, { forwardRef, useImperativeHandle } from 'react'
 
 import { styleMap } from './Fieldset.Styles'
 import { useDisabled } from '../../Hooks/useDisabled/useDisabled'

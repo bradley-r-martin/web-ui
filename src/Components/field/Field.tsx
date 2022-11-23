@@ -1,6 +1,6 @@
 import { FieldFunctions, FieldProps } from './Field.Definition'
 import { InputFunctions, InputProps } from '../inputs/Input.Definition'
-import { forwardRef, useId, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useId, useImperativeHandle, useRef } from 'react'
 
 import Exception from '../exception/Exception'
 import Input from '../inputs/Input'

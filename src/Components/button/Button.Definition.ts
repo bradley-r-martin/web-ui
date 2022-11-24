@@ -18,6 +18,7 @@ export interface ButtonProps
   shape?: TypeOfShape
   loading?: boolean
   selected?: boolean
+  type?: 'button' | 'submit'
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

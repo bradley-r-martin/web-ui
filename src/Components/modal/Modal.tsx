@@ -6,17 +6,15 @@ import { ModalContent } from './ModalContent'
 import { ModalFooter } from './ModalFooter'
 import { ModalHeader } from './ModalHeader'
 import { ModalTitle } from './ModalTitle'
+import { Portal } from '../portal/Portal'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
-import { usePortal } from '../../Hooks/usePortal/usePortal'
 
 const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalProps) => {
   const { children, onDismiss, size, node } = props
 
-  const Portal = usePortal({ node })
-
   return (
-    <Portal>
+    <Portal node={node}>
       <div className='flex justify-center fixed inset-0  w-auto  h-auto items-end md:items-center overflow-hidden z-20'>
         <motion.div
           key='overlay'

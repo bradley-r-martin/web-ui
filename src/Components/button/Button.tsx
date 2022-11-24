@@ -19,6 +19,7 @@ const Button: React.ForwardRefRenderFunction<ButtonFunctions, ButtonProps> = (
     selected = false,
     loading = false,
     disabled = false,
+    type = 'button',
     onClick,
   } = props
   const isLoading = loading
@@ -41,7 +42,7 @@ const Button: React.ForwardRefRenderFunction<ButtonFunctions, ButtonProps> = (
   const classnames = styleMap({ isDisabled, isLoading, isSelected, variant, intent, shape, size })
 
   return (
-    <button ref={buttonRef} className={classnames.component} onClick={onClick}>
+    <button type={type} ref={buttonRef} className={classnames.component} onClick={onClick}>
       <LeftEnhancer />
       <span>
         <TopEnhancer />

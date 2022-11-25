@@ -8,7 +8,6 @@ export interface ModalProps {
   size?: any
   onDismiss?: () => void
   isOpen?: boolean
-  node?: HTMLElement
 }
 
 export interface ModalComposition {

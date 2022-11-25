@@ -9,7 +9,7 @@ const ModalContained: FunctionComponent = () => {
     <div>
       <div ref={ref} className='border-2 border-red-500 h-64 w-64'></div>
       {ref.current ? (
-        <Modal node={ref.current} size='lg:w-1/3'>
+        <Modal size='lg:w-1/3'>
           <Modal.Header>
             <Modal.Title title='Contained' hero />
           </Modal.Header>

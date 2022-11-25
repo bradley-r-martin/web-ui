@@ -11,10 +11,10 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 
 const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalProps) => {
-  const { children, onDismiss, size, node } = props
+  const { children, onDismiss, size } = props
 
   return (
-    <Portal node={node}>
+    <Portal>
       <div className='flex justify-center fixed inset-0  w-auto  h-auto items-end md:items-center overflow-hidden z-20'>
         <motion.div
           key='overlay'
@@ -28,7 +28,7 @@ const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalPro
         ></motion.div>
         <motion.div
           key='modal'
-          className={`bg-white relative shadow-2xl rounded-t-2xl max-h-full overflow-auto md:rounded-md max-w-full w-full md:w-auto z-30 ${size}`}
+          className={`bg-white relative shadow-2xl rounded-t-2xl max-h-full overflow-auto  md:rounded-md max-w-full w-full md:w-auto z-30 ${size}`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}

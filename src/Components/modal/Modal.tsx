@@ -6,7 +6,7 @@ import { ModalContent } from './ModalContent'
 import { ModalFooter } from './ModalFooter'
 import { ModalHeader } from './ModalHeader'
 import { ModalTitle } from './ModalTitle'
-import { Portal } from '../portal/Portal'
+import { Portal } from '../portal'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 

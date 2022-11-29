@@ -40,7 +40,6 @@ const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalPro
           }}
         >
           {children}
-
           {onDismiss ? (
             <span className='absolute top-3 right-3'>
               <Button size='sm' shape='circle' onClick={onDismiss}>

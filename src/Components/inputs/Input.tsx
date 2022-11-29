@@ -1,10 +1,12 @@
 import { DateFunctions, DateProps } from './date/Date.Definition'
+import { ImageFunctions, ImageIO, ImageProps } from './image/Image.Definition'
 import { InputFunctions, InputProps } from './Input.Definition'
 import React, { ForwardedRef, forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { TextareaFunctions, TextareaProps } from './textarea/Textarea.Definition'
 import { TextboxFunctions, TextboxProps } from './textbox/Textbox.Definition'
 
 import Date from './date/Date'
+import { Image } from './image'
 import Textarea from './textarea/Textarea'
 import Textbox from './textbox/Textbox'
 import { styleMap } from './Input.Styles'
@@ -27,7 +29,7 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
     inputRef?.current?.focus()
   }
 
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState<any>()
 
   const { words, lines, characters } = useVocabulary({ value })
 
@@ -45,28 +47,37 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
       case 'textbox':
         return (
           <Textbox
+            {...(native as TextboxProps)}
             ref={inputRef as ForwardedRef<TextboxFunctions>}
             value={value}
             onChange={(e: any) => setValue(e.target.value)}
-            {...(native as TextboxProps)}
           />
         )
       case 'textarea':
         return (
           <Textarea
+            {...(native as TextareaProps)}
             ref={inputRef as ForwardedRef<TextareaFunctions>}
             value={value}
             onChange={(e: any) => setValue(e.target.value)}
-            {...(native as TextareaProps)}
+          />
+        )
+      case 'image':
+        return (
+          <Image
+            {...(native as ImageProps)}
+            ref={inputRef as ForwardedRef<ImageFunctions>}
+            value={value}
+            onChange={(image: ImageIO) => setValue(image)}
           />
         )
       case 'date':
         return (
           <Date
+            {...(native as DateProps)}
             ref={inputRef as ForwardedRef<DateFunctions>}
             value={value}
             onChange={(e: any) => setValue(e.target.value)}
-            {...(native as DateProps)}
           />
         )
       default:

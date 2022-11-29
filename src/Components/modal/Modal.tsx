@@ -15,7 +15,10 @@ const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalPro
 
   return (
     <Portal>
-      <div className='flex justify-center fixed inset-0  w-auto  h-auto items-end md:items-center overflow-hidden z-20'>
+      <div
+        className='flex justify-center fixed inset-0  w-auto  h-auto items-end md:items-center overflow-hidden'
+        style={{ zIndex: 200 }}
+      >
         <motion.div
           key='overlay'
           className='flex justify-center bg-black bg-opacity-25 absolute inset-0  w-auto h-auto'
@@ -37,7 +40,6 @@ const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalPro
           }}
         >
           {children}
-
           {onDismiss ? (
             <span className='absolute top-3 right-3'>
               <Button size='sm' shape='circle' onClick={onDismiss}>

@@ -3,7 +3,7 @@ import {} from 'react'
 import { UseVocabularyProps } from './useVocabulary.Definition'
 
 export function useVocabulary(props: UseVocabularyProps) {
-  const { value } = props
+  const { value = '' } = props
 
   const words = () => {
     return value.split(/\b\S+\b/).length - 1

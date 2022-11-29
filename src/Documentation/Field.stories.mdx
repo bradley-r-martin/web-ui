@@ -1,0 +1,44 @@
+<!-- Status.stories.mdx -->
+
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import WebUIConfig from '../Config/WebUIConfig'
+import Field from '../Components/field/Field'
+import Vocabulary from '../Components/enhancers/vocabulary/Vocabulary'
+import Dictation from '../Components/enhancers/dictation/Dictation'
+
+<Meta title='Components/Field' argTypes={{}} component={Field} />
+
+# Field
+
+Let's define a story for our `Field` component
+
+```javascript
+import { Field } from '@bradley-r-martin/web-ui'
+```
+
+## Image
+
+<Canvas>
+  <WebUIConfig>
+    <Field type='image' />
+  </WebUIConfig>
+</Canvas>
+
+## Date
+
+<Canvas>
+  <Field type='date' />
+</Canvas>
+
+## Textarea
+
+<Canvas>
+  <Field
+    type='textarea'
+    enhancers={{
+      right: Dictation,
+      bottom: Vocabulary,
+    }}
+  />
+</Canvas>

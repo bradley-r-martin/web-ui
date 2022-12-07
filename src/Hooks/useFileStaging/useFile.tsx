@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { ImageIO } from '../../Components/inputs/image/Image.Definition'
 import { UseFileProps } from './useFile.Definition'
 import useWebUIConfig from '../../Config/useWebConfig'
+import { v4 as uuid } from 'uuid'
 
 export function useFile(props: UseFileProps) {
   const config = useWebUIConfig()
@@ -13,7 +14,7 @@ export function useFile(props: UseFileProps) {
 
   useEffect(() => {
     if (props.value) {
-      // setPreview(props.value.url)
+      setPreview(props.value.url)
     } else {
       setPreview(null)
     }
@@ -28,7 +29,15 @@ export function useFile(props: UseFileProps) {
     return (file: File) =>
       new Promise<ImageIO>((resolve) => {
         setTimeout(() => {
-          resolve(null)
+          const id = uuid()
+          resolve({
+            uuid: id,
+            key: `tmp/${id}`,
+            bucket: '',
+            name: file.name,
+            contentType: file.type,
+            url: `${preview}`,
+          })
         }, 2000)
       })
   }

@@ -7,7 +7,7 @@ import { styleMap } from './Date.Styles'
 import { useInputPart } from '../../../Hooks/useInputPart/useInputPart'
 
 const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: DateProps, ref) => {
-  const { className, ...native } = props
+  const { ...native } = props
 
   const [date, setDate] = useState({ day: '', month: '', year: '' })
 
@@ -98,7 +98,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[0]}
         />
         <span>/</span>
@@ -107,7 +107,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[1]}
         />
         <span>/</span>
@@ -116,7 +116,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[2]}
         />
       </div>
@@ -126,7 +126,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[3]}
         />
         <span>:</span>
@@ -135,7 +135,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[4]}
         />
       </div>

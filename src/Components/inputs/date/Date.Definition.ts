@@ -1,15 +1,13 @@
 import Date from './Date'
 import { HasEnhancers } from '../../../Traits/HasEnhancers'
+import { HasIO } from '../../../Traits/HasIO'
+import { HasId } from '../../../Traits/HasId'
 import { HasVariants } from '../../../Traits/HasVariants'
 import React from 'react'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface DateProps
-  extends Omit<React.HTMLProps<HTMLInputElement>, 'ref'>,
-    HasEnhancers,
-    HasVariants {
-  inherit?: boolean
-}
+export type DateIO = null | string
+
+export interface DateProps extends HasIO<DateIO>, HasId, HasEnhancers, HasVariants {}
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface DateFunctions {}

@@ -4,6 +4,7 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
 
 import WebUIConfig from '../Config/WebUIConfig'
 import Field from '../Components/field/Field'
+import Form from '../Components/form/Form'
 import Vocabulary from '../Components/enhancers/vocabulary/Vocabulary'
 import Dictation from '../Components/enhancers/dictation/Dictation'
 
@@ -41,4 +42,45 @@ import { Field } from '@bradley-r-martin/web-ui'
       bottom: Vocabulary,
     }}
   />
+</Canvas>
+
+## checkbox
+
+<Canvas>
+  <Field type='checkbox' label='Inline' inline variant='filled' />
+  <Field type='checkbox' label='Stacked' variant='outlined' />
+</Canvas>
+
+## Radio
+
+<Canvas>
+  <Field type='radio' label='Inline' inline variant='filled' />
+  <Field type='radio' label='Stacked' variant='outlined' />
+</Canvas>
+
+## with form
+
+<Canvas>
+  <WebUIConfig>
+    <Form>
+      <Field type='image' />
+      <Field
+        type='textarea'
+        enhancers={{
+          right: Dictation,
+          bottom: Vocabulary,
+        }}
+      />
+      <Field
+        type='radio'
+        label='Inline'
+        inline
+        variant='filled'
+        value='test'
+        name='filter.option'
+      />
+      <Field type='radio' label='Two' inline variant='filled' value='two' name='filter.option' />
+      <Field type='checkbox' label='Inline' inline variant='filled' />
+    </Form>
+  </WebUIConfig>
 </Canvas>

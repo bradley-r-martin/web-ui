@@ -1,17 +1,23 @@
-import { DateFunctions, DateProps } from './date/Date.Definition'
+import { CheckboxFunctions, CheckboxIO, CheckboxProps } from './checkbox/Checkbox.Definition'
+import { DateFunctions, DateIO, DateProps } from './date/Date.Definition'
 import { ImageFunctions, ImageIO, ImageProps } from './image/Image.Definition'
 import { InputFunctions, InputProps } from './Input.Definition'
+import { RadioFunctions, RadioIO, RadioProps } from './radio/Radio.Definition'
 import React, { ForwardedRef, forwardRef, useImperativeHandle, useRef, useState } from 'react'
-import { TextareaFunctions, TextareaProps } from './textarea/Textarea.Definition'
-import { TextboxFunctions, TextboxProps } from './textbox/Textbox.Definition'
+import { TextareaFunctions, TextareaIO, TextareaProps } from './textarea/Textarea.Definition'
+import { TextboxFunctions, TextboxIO, TextboxProps } from './textbox/Textbox.Definition'
 
+import Checkbox from './checkbox/Checkbox'
 import Date from './date/Date'
 import { Image } from './image'
+import { InputContext } from './Input.Context'
+import Radio from './radio/Radio'
 import Textarea from './textarea/Textarea'
 import Textbox from './textbox/Textbox'
 import { styleMap } from './Input.Styles'
 import { useDisabled } from '../../Hooks/useDisabled/useDisabled'
 import { useEnhancer } from '../../Hooks/useEnhancer/useEnhancer'
+import { useIO } from '../../Hooks/useIO/useIO'
 import { useVocabulary } from '../../Hooks/useVocabulary/useVocabulary'
 
 const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
@@ -20,7 +26,7 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
 ) => {
   const { type, ...native } = props
 
-  const { enhancers, disabled, inherit } = props
+  const { enhancers } = props
 
   const inputRef = useRef<any>()
 
@@ -29,18 +35,13 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
     inputRef?.current?.focus()
   }
 
-  const [value, setValue] = useState<any>()
+  const [input, output] = useIO({ name: props.id, output: props.output, input: props.input })
 
-  const { words, lines, characters } = useVocabulary({ value })
+  // const { words, lines, characters } = useVocabulary({ value: input })
 
-  const { isDisabled, enable, disable } = useDisabled({ disabled, inherit })
+  const { isDisabled, enable, disable } = useDisabled({ disabled: false, inherit: false })
 
-  const { TopEnhancer, BottomEnhancer, LeftEnhancer, RightEnhancer } = useEnhancer({
-    focus,
-    enhancers,
-  })
-
-  const abilities = { enable, disable, setValue, value, words, lines, characters, focus }
+  const abilities = { enable, disable, focus }
 
   function component() {
     switch (type) {
@@ -48,63 +49,58 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
         return (
           <Textbox
             {...(native as TextboxProps)}
+            {...{ input, output }}
             ref={inputRef as ForwardedRef<TextboxFunctions>}
-            value={value}
-            onChange={(e: any) => setValue(e.target.value)}
           />
         )
       case 'textarea':
         return (
           <Textarea
             {...(native as TextareaProps)}
+            {...{ input, output }}
             ref={inputRef as ForwardedRef<TextareaFunctions>}
-            value={value}
-            onChange={(e: any) => setValue(e.target.value)}
           />
         )
       case 'image':
         return (
           <Image
             {...(native as ImageProps)}
+            {...{ input, output }}
             ref={inputRef as ForwardedRef<ImageFunctions>}
-            value={value}
-            onChange={(image: ImageIO) => setValue(image)}
           />
         )
       case 'date':
         return (
           <Date
             {...(native as DateProps)}
+            {...{ input, output }}
             ref={inputRef as ForwardedRef<DateFunctions>}
-            value={value}
-            onChange={(e: any) => setValue(e.target.value)}
+          />
+        )
+      case 'checkbox':
+        return (
+          <Checkbox
+            {...(native as CheckboxProps)}
+            {...{ input, output }}
+            ref={inputRef as ForwardedRef<CheckboxFunctions>}
+          />
+        )
+      case 'radio':
+        return (
+          <Radio
+            {...(native as RadioProps)}
+            {...{ input, output }}
+            ref={inputRef as ForwardedRef<RadioFunctions>}
           />
         )
       default:
         return <>Unknown input type</>
     }
   }
-  const classnames = styleMap({ ...props, isDisabled })
 
   useImperativeHandle(ref, () => abilities)
 
-  return (
-    <div
-      className={classnames.area}
-      onMouseDown={(e) => {
-        e.preventDefault()
-        focus()
-      }}
-    >
-      <LeftEnhancer {...abilities} />
-      <div className='flex flex-col flex-1'>
-        <TopEnhancer {...abilities} />
-        {component()}
-        <BottomEnhancer {...abilities} />
-      </div>
-      <RightEnhancer {...abilities} />
-    </div>
-  )
+  return <InputContext.Provider value={props}>{component()}</InputContext.Provider>
 }
 
 export default forwardRef(Input)

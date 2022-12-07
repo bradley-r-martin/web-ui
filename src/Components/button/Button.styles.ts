@@ -19,7 +19,7 @@ const styles = {
     intent: {
       default: {
         filled:
-          'shadow  hover:bg-gray-50 active:bg-gray-200 focus-visible:outline-slate-800 text-slate-700',
+          'shadow bg-white hover:bg-gray-50 active:bg-gray-200 focus-visible:outline-slate-800 text-slate-700',
         outlined:
           'shadow bg-transparent border-slate-500 hover:border-slate-600 hover:ring-1 hover:ring-inset ring-slate-600 active:bg-gray-50 active:border-slate-800 focus-visible:outline-slate-800',
         transparent:

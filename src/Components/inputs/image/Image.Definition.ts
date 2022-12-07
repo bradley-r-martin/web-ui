@@ -1,4 +1,6 @@
 import { HasEnhancers } from '../../../Traits/HasEnhancers'
+import { HasIO } from '../../../Traits/HasIO'
+import { HasId } from '../../../Traits/HasId'
 import { HasVariants } from '../../../Traits/HasVariants'
 import Image from './Image'
 
@@ -11,13 +13,8 @@ export type ImageIO = null | {
   url: string
 }
 
-export interface ImageProps
-  extends Omit<React.HTMLProps<HTMLInputElement>, 'ref' | 'onChange' | 'value'>,
-    HasEnhancers,
-    HasVariants {
+export interface ImageProps extends HasIO<ImageIO>, HasId, HasEnhancers, HasVariants {
   inherit?: boolean
-  value?: ImageIO
-  onChange: (image: ImageIO) => void
   onUpload: (file: File) => Promise<ImageIO>
 }
 

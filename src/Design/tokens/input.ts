@@ -1,12 +1,13 @@
 export const input = {
   input: {
-    base: 'border-none outline-none w-full bg-transparent resize-none	',
+    base: 'border-none outline-none w-full bg-transparent resize-none',
   },
+
   area: {
-    base: 'border-solid rounded flex items-center justify-center relative border-2 flex-1 focus-within:ring-opacity-20  w-full items-stretch focus-within:ring-2',
+    base: 'border-solid rounded flex items-center justify-center relative border-2 flex-1 focus-within:ring-opacity-20 w-full items-stretch focus-within:ring-2',
     variant: {
       filled:
-        'bg-gray-200  focus-within:bg-white focus-within:border-blue-400 focus-within:ring-blue-400',
+        'bg-gray-200 focus-within:bg-white focus-within:border-blue-400 focus-within:ring-blue-400',
       transparent: 'border-transparent',
       outlined:
         'bg-white border-gray-300 text-gray-700 focus-within:border-blue-400 focus-within:ring-blue-400',

@@ -9,6 +9,7 @@ export type FieldProps = InputProps &
   HasName & {
     label?: LabelProps['children']
     description?: LabelProps['description']
+    inline?: boolean
   }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

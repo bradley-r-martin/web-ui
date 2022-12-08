@@ -33,6 +33,7 @@ const Radio: React.ForwardRefRenderFunction<RadioFunctions, RadioProps> = (
           className={classnames.input}
           onClick={() => output(input === value ? null : value)}
           checked={input === value}
+          {...native}
         />
       </div>
     </div>

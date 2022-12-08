@@ -1,8 +1,10 @@
 import { FormFunctions, FormProps } from './Form.Definition'
 import React, { forwardRef, useImperativeHandle, useState } from 'react'
 
+import Conditional from '../conditional/Conditional'
 import FocusTrap from 'focus-trap-react'
 import FormContext from './Form.Context'
+import Syntax from '../syntax/Syntax'
 import _ from 'lodash'
 import { useDisabled } from '../../Hooks/useDisabled/useDisabled'
 import { useFocused } from '../../Hooks/useFocused/useFocused'
@@ -18,7 +20,7 @@ import { useForm } from '../../Hooks/useForm'
 */
 
 const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: FormProps, ref) => {
-  const { children, locked, ...native } = props
+  const { children, locked, debug, ...native } = props
 
   const [state, setState] = useState({})
 
@@ -46,7 +48,14 @@ const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: F
       <FocusTrap active={locked} focusTrapOptions={{ escapeDeactivates: false }}>
         <div {...native}>{children}</div>
       </FocusTrap>
-      {JSON.stringify(state)}
+      <Conditional expression={!!debug}>
+        <div
+          className='bg-slate-100 w-full flex-1 p-2 text-xs overflow-auto'
+          style={{ maxHeight: 100 }}
+        >
+          <Syntax json={state} />
+        </div>
+      </Conditional>
     </FormContext.Provider>
   )
 }

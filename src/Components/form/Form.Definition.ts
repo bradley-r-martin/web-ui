@@ -5,6 +5,7 @@ export interface FormProps extends React.HTMLProps<HTMLDivElement> {
   input?: object
   output?: (state: object) => void
   locked?: boolean
+  debug?: boolean
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

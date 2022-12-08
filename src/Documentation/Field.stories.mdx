@@ -58,11 +58,24 @@ import { Field } from '@bradley-r-martin/web-ui'
   <Field type='radio' label='Stacked' variant='outlined' />
 </Canvas>
 
+## Transfer
+
+<Canvas>
+  <Field
+    type='transfer'
+    label='Transfer'
+    options={[
+      { id: 1, text: 'test' },
+      { id: 2, text: 'test 2' },
+    ]}
+  />
+</Canvas>
+
 ## with form
 
 <Canvas>
   <WebUIConfig>
-    <Form>
+    <Form locked={false}>
       <Field type='image' />
       <Field
         type='textarea'
@@ -79,8 +92,8 @@ import { Field } from '@bradley-r-martin/web-ui'
         value='test'
         name='filter.option'
       />
-      <Field type='radio' label='Two' inline variant='filled' value='two' name='filter.option' />
-      <Field type='checkbox' label='Inline' inline variant='filled' />
+      <Field type='radio' label='Two' inline value='two' name='filter.option' />
+      <Field type='checkbox' label='Inline' inline />
     </Form>
   </WebUIConfig>
 </Canvas>

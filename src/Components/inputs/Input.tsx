@@ -6,6 +6,7 @@ import { RadioFunctions, RadioIO, RadioProps } from './radio/Radio.Definition'
 import React, { ForwardedRef, forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { TextareaFunctions, TextareaIO, TextareaProps } from './textarea/Textarea.Definition'
 import { TextboxFunctions, TextboxIO, TextboxProps } from './textbox/Textbox.Definition'
+import { TransferFunctions, TransferProps } from './transfer/Transfer.Definition'
 
 import Checkbox from './checkbox/Checkbox'
 import Date from './date/Date'
@@ -14,6 +15,7 @@ import { InputContext } from './Input.Context'
 import Radio from './radio/Radio'
 import Textarea from './textarea/Textarea'
 import Textbox from './textbox/Textbox'
+import Transfer from './transfer/Transfer'
 import { styleMap } from './Input.Styles'
 import { useDisabled } from '../../Hooks/useDisabled/useDisabled'
 import { useEnhancer } from '../../Hooks/useEnhancer/useEnhancer'
@@ -91,6 +93,14 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
             {...(native as RadioProps)}
             {...{ input, output }}
             ref={inputRef as ForwardedRef<RadioFunctions>}
+          />
+        )
+      case 'transfer':
+        return (
+          <Transfer
+            {...(native as TransferProps)}
+            {...{ input, output }}
+            ref={inputRef as ForwardedRef<TransferFunctions>}
           />
         )
       default:

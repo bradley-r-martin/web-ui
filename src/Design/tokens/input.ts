@@ -4,7 +4,7 @@ export const input = {
   },
 
   area: {
-    base: 'border-solid rounded flex items-center justify-center relative border-2 flex-1 focus-within:ring-opacity-20 w-full items-stretch focus-within:ring-2',
+    base: 'border-solid shadow-inner rounded flex items-center justify-center relative border-2 flex-1 focus-within:ring-opacity-20 w-full items-stretch focus-within:ring-2',
     variant: {
       filled:
         'bg-gray-200 focus-within:bg-white focus-within:border-sky-400 focus-within:ring-sky-400',

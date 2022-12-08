@@ -4,7 +4,7 @@ const styles = {
   component: {
     base: 'flex',
     inline: 'space-x-4 items-center',
-    stacked: 'flex-col ',
+    stacked: 'flex-col space-y-2',
   },
 }
 

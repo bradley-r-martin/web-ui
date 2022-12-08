@@ -4,7 +4,7 @@ export const base = ''
 
 export const styles = {
   component: {
-    base: 'flex flex-col justify-center',
+    base: 'flex flex-col justify-center select-none',
   },
   description: {
     base: 'font-light',

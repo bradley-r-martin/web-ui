@@ -65,6 +65,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
             .map((option) => {
               return (
                 <button
+                  type='button'
                   key={option.id}
                   onClick={() => {
                     add(option.id)
@@ -107,6 +108,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
             .map((option) => {
               return (
                 <button
+                  type='button'
                   key={option.id}
                   onClick={() => remove(option.id)}
                   className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex'

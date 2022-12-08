@@ -53,7 +53,7 @@ const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: F
           className='bg-slate-100 w-full flex-1 p-2 text-xs overflow-auto'
           style={{ maxHeight: 100 }}
         >
-          <Syntax json={state} />
+          <Syntax json={props?.input ?? state} />
         </div>
       </Conditional>
     </FormContext.Provider>

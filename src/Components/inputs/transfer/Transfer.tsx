@@ -33,7 +33,9 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
   }
 
   function search(find: string) {
-    return options.filter((obj) => Object.keys(obj).some((key) => `${obj[key]}`.includes(find)))
+    return options.filter((obj) =>
+      Object.keys(obj).some((key) => `${obj[key]}`.toLowerCase().includes(find.toLowerCase())),
+    )
   }
 
   useImperativeHandle(ref, () => ({ focus }))
@@ -56,7 +58,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
           </div>
         </div>
       </div>
-      <div className='flex items-stretch flex-1'>
+      <div className='flex items-stretch overflow-hidden flex-1'>
         <div className='flex-1 p-2 flex flex-col space-y-2 overflow-auto'>
           {search(filter)
             .filter((option) => !selected.includes(option.id))

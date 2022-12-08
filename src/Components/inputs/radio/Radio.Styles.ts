@@ -6,7 +6,7 @@ const styles = {
     base: 'inline-flex space-x-2',
   },
   checkbox: {
-    base: 'flex items-center justify-center relative',
+    base: 'flex items-center justify-center relative ',
   },
   input: {
     base: 'absolute inset-0 outline-none opacity-0',

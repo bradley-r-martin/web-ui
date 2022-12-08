@@ -70,10 +70,6 @@ export function useEnhancer(props: UseEnhancerProps) {
     return <></>
   }
 
-  useEffect(() => {
-    console.log('should render only once')
-  }, [])
-
   return useMemo(
     () => ({
       TopEnhancer,

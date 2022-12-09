@@ -1,3 +1,4 @@
+import { BuilderFunctions, BuilderIO } from './builder/Builder.Definition'
 import { CheckboxFunctions, CheckboxIO, CheckboxProps } from './checkbox/Checkbox.Definition'
 import { DateFunctions, DateIO, DateProps } from './date/Date.Definition'
 import { ImageFunctions, ImageIO, ImageProps } from './image/Image.Definition'
@@ -6,6 +7,7 @@ import { TextareaFunctions, TextareaIO, TextareaProps } from './textarea/Textare
 import { TextboxFunctions, TextboxIO, TextboxProps } from './textbox/Textbox.Definition'
 import { TransferFunctions, TransferIO, TransferProps } from './transfer/Transfer.Definition'
 
+import Builder from './builder/Builder'
 import Checkbox from './checkbox/Checkbox'
 import Date from './date/Date'
 import { Image } from './image'
@@ -29,6 +31,8 @@ type InputRadio = { type: 'radio' } & RadioProps
 
 type InputTransfer = { type: 'transfer' } & TransferProps
 
+type InputBuilder = { type: 'builder' } & TransferProps
+
 export type InputProps =
   | InputTextbox
   | InputTextarea
@@ -37,6 +41,7 @@ export type InputProps =
   | InputCheckbox
   | InputRadio
   | InputTransfer
+  | InputBuilder
 
 export type InputFunctions =
   | TextboxFunctions
@@ -46,8 +51,17 @@ export type InputFunctions =
   | CheckboxFunctions
   | RadioFunctions
   | TransferFunctions
+  | BuilderFunctions
 
-export type InputIO = TextareaIO | TextboxIO | DateIO | ImageIO | CheckboxIO | RadioIO | TransferIO
+export type InputIO =
+  | TextareaIO
+  | TextboxIO
+  | DateIO
+  | ImageIO
+  | CheckboxIO
+  | RadioIO
+  | TransferIO
+  | BuilderIO
 
 export type InputReference = React.ElementRef<
   | typeof Textbox
@@ -57,4 +71,5 @@ export type InputReference = React.ElementRef<
   | typeof Checkbox
   | typeof Radio
   | typeof Transfer
+  | typeof Builder
 >

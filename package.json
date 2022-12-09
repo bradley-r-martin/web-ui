@@ -44,6 +44,8 @@
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-frame-component": "^5.2.3",
+    "react-full-screen": "^1.1.1",
     "react-multi-ref": "^1.0.1",
     "react-speech-recognition": "^3.10.0",
     "url": "^0.11.0",

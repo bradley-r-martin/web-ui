@@ -1,3 +1,4 @@
+import { BuilderFunctions, BuilderProps } from './builder/Builder.Definition'
 import { CheckboxFunctions, CheckboxIO, CheckboxProps } from './checkbox/Checkbox.Definition'
 import { DateFunctions, DateIO, DateProps } from './date/Date.Definition'
 import { ImageFunctions, ImageIO, ImageProps } from './image/Image.Definition'
@@ -8,6 +9,7 @@ import { TextareaFunctions, TextareaIO, TextareaProps } from './textarea/Textare
 import { TextboxFunctions, TextboxIO, TextboxProps } from './textbox/Textbox.Definition'
 import { TransferFunctions, TransferProps } from './transfer/Transfer.Definition'
 
+import Builder from './builder/Builder'
 import Checkbox from './checkbox/Checkbox'
 import Date from './date/Date'
 import { Image } from './image'
@@ -101,6 +103,14 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
             {...(native as TransferProps)}
             {...{ input, output }}
             ref={inputRef as ForwardedRef<TransferFunctions>}
+          />
+        )
+      case 'builder':
+        return (
+          <Builder
+            {...(native as BuilderProps)}
+            {...{ input, output }}
+            ref={inputRef as ForwardedRef<BuilderFunctions>}
           />
         )
       default:

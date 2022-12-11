@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react'
 
-import { HeroAProps } from './HeroA.Definition'
+import { BlogAProps } from './BlogA.Definition'
 
-const HeroA: FunctionComponent<HeroAProps> = (props) => {
+const BlogA: FunctionComponent<BlogAProps> = (props) => {
   return (
     <section className='text-gray-600 body-font'>
       <div className='container px-5 py-24 mx-auto'>
@@ -16,7 +16,7 @@ const HeroA: FunctionComponent<HeroAProps> = (props) => {
               />
               <div className='p-6'>
                 <h2 className='tracking-widest text-xs title-font font-medium text-gray-400 mb-1'>
-                  {props.title}
+                  CATEGORY
                 </h2>
                 <h1 className='title-font text-lg font-medium text-gray-900 mb-3'>The Catalyzer</h1>
                 <p className='leading-relaxed mb-3'>
@@ -210,4 +210,4 @@ const HeroA: FunctionComponent<HeroAProps> = (props) => {
   )
 }
 
-export default HeroA
+export default BlogA

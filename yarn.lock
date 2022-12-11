@@ -9691,6 +9691,11 @@ react-speech-recognition@^3.10.0:
   resolved "https://registry.yarnpkg.com/react-speech-recognition/-/react-speech-recognition-3.10.0.tgz#7aa43bb28d78b92671864dabba3a70489ccad27b"
   integrity sha512-EVSr4Ik8l9urwdPiK2r0+ADrLyDDrjB0qBRdUWO+w2MfwEBrj6NuRmy1GD3x7BU/V6/hab0pl8Lupen0zwlJyw==
 
+react-use-iframe-content-height@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-use-iframe-content-height/-/react-use-iframe-content-height-1.0.2.tgz#c78c5eece7b410e99acd1f79cecc6e1f951e64cc"
+  integrity sha512-wVT2U7zpsPSVmR+acOC2SMbrsAnv7EvWNfI4/vjOMABZClZd8cUCofn69pJgX+2uyfiBRAgptxM/jLNDXeNvBw==
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"

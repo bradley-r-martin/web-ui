@@ -4,10 +4,9 @@ import {
   QueueListIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import React, { FunctionComponent, useEffect } from 'react'
+import React, { FunctionComponent } from 'react'
 import { Reorder, motion, useDragControls, useMotionValue } from 'framer-motion'
 
-import { BuilderIO } from '../Builder.Definition'
 import { Button } from '../../../button'
 import Conditional from '../../../conditional/Conditional'
 import { HasBlocks } from '../../../../Traits/HasBlocks'
@@ -39,7 +38,9 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
       style={{ boxShadow, y, marginBottom: isSelected ? 20 : 0, marginTop: isSelected ? 20 : 0 }}
       onClick={() => select(item.id)}
       className={`p-3  rounded  ${
-        isSelected ? 'border border-slate-500 bg-white relative' : 'border border-transparent'
+        isSelected
+          ? 'border border-dotted border-slate-500 bg-white relative'
+          : 'border border-transparent'
       }`}
     >
       <Conditional expression={isSelected}>

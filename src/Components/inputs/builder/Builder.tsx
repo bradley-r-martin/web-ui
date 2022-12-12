@@ -15,12 +15,17 @@ import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
 import { BlogA } from '../../../Blocks/Blog/BlogA'
+import { BlogB } from '../../../Blocks/Blog/BlogB'
+import { BlogC } from '../../../Blocks/Blog/BlogC'
+import { HeroA } from '../../../Blocks/Hero/HeroA'
+import { HeroB } from '../../../Blocks/Hero/HeroB'
+import { HeroC } from '../../../Blocks/Hero/HeroC'
+import { StepA } from '../../../Blocks/Step/StepA'
+import { StepB } from '../../../Blocks/Step/StepB'
 import { BuilderRender } from './BuilderRender'
 import { Button } from '../../button'
 import Conditional from '../../conditional/Conditional'
 import Frame from 'react-frame-component'
-import { HeroA } from '../../../Blocks/Hero/HeroA'
-import { HeroB } from '../../../Blocks/Hero/HeroB'
 import Library from './Library/Library'
 import { styleMap } from './Builder.Styles'
 import { useCycle } from 'framer-motion'
@@ -53,7 +58,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
 
   const classnames = styleMap({ ...props, isChecked: input })
 
-  const blocks = [HeroA(), HeroB(), BlogA()]
+  const blocks = [HeroA(), HeroB(), HeroC(), BlogA(), BlogB(), BlogC(), StepA(), StepB()]
 
   return (
     <FullScreen handle={handle}>
@@ -76,9 +81,8 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                   onClick={() => toggleOpen()}
                 >
                   <PlusIcon
-                    className={`h-4 w-4 transition ease-in-out duration-100 ${
-                      isOpen ? 'rotate-45' : ''
-                    }`}
+                    className={`h-4 w-4 transition ease-in-out duration-100 ${isOpen ? 'rotate-45' : ''
+                      }`}
                     strokeWidth={4}
                   />
                 </Button>
@@ -133,9 +137,8 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
             </div>
             <Frame
               className={`mx-auto bg-white shadow-2xl w-full 
-              ${screen === 'desktop' ? 'min-w-[1200px]' : ''} ${
-                screen === 'tablet' ? 'max-w-4xl' : ''
-              }  ${screen === 'phone' ? 'max-w-md' : ''} h-full`}
+              ${screen === 'desktop' ? 'min-w-[1200px]' : ''} ${screen === 'tablet' ? 'max-w-4xl' : ''
+                }  ${screen === 'phone' ? 'max-w-md' : ''} h-full`}
               initialContent='<!DOCTYPE html><html><head><script src="https://cdn.tailwindcss.com"></script></head><body><div id="mountHere"></div></body></html>'
               mountTarget='#mountHere'
             >

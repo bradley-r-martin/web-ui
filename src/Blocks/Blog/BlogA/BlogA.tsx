@@ -16,7 +16,7 @@ const BlogA: FunctionComponent<BlogAProps> = (props) => {
               />
               <div className='p-6'>
                 <h2 className='tracking-widest text-xs title-font font-medium text-gray-400 mb-1'>
-                  CATEGORY
+                  {props.title}
                 </h2>
                 <h1 className='title-font text-lg font-medium text-gray-900 mb-3'>The Catalyzer</h1>
                 <p className='leading-relaxed mb-3'>

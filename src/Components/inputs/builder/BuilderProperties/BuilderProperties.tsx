@@ -69,7 +69,7 @@ const BuilderProperties: React.ForwardRefRenderFunction<
       <motion.div
         initial={false}
         variants={variants}
-        className='bg-slate-300 backdrop-blur-md absolute inset-0 z-10 overflow-hidden'
+        className='bg-slate-300 bg-opacity-40 backdrop-blur-sm absolute inset-0 z-10 overflow-hidden'
       ></motion.div>
       <motion.div
         variants={panel}

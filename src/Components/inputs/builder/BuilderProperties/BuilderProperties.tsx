@@ -1,9 +1,10 @@
 import { BuilderPropertiesFunctions, BuilderPropertiesProps } from './BuilderProperties.Definition'
-import { ChevronLeftIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import React, { forwardRef, useImperativeHandle } from 'react'
 
 import { Button } from '../../../button'
 import { Field } from '../../../field'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
 import useBuilder from '../Builder.context'
 
 const BuilderProperties: React.ForwardRefRenderFunction<
@@ -22,40 +23,85 @@ const BuilderProperties: React.ForwardRefRenderFunction<
 
   useImperativeHandle(ref, () => ({}))
 
+  const variants = {
+    open: {
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        damping: 10,
+        stiffness: 10,
+      },
+    },
+    close: {
+      opacity: 0,
+      transition: {
+        type: 'tween',
+        damping: 10,
+        stiffness: 10,
+      },
+    },
+  }
+
+  const panel = {
+    open: {
+      y: '0%',
+      transition: {
+        type: 'tween',
+        damping: 10,
+        stiffness: 10,
+      },
+    },
+    close: {
+      y: '100%',
+      transition: {
+        type: 'tween',
+        damping: 10,
+        stiffness: 10,
+      },
+    },
+  }
+
   return (
-    <div className='w-1/4 bg-slate-50 shadow-xl  border-l border-slate-200 overflow-auto relative'>
-      {block ? (
-        <>
-          <div className='bg-black bg-opacity-40 absolute inset-0'></div>
-          <div className='bg-slate-50 shadow-xl absolute top-20 left-0 right-0 bottom-0 p-4'>
-            <div className='flex items-center justify-between mb-4'>
-              <div>
-                <div className='text-slate-600 text-xs font-light'>{group}</div>
-                <div className='text-slate-600 text-sm font-bold'>{name}</div>
-              </div>
-              <div>
-                <Button shape='circle' size='xs' onClick={() => setSelected('')}>
-                  <XMarkIcon className='h-4 w-4' />
-                </Button>
-              </div>
-            </div>
-            <div className='space-y-2'>
-              {block.fields.map((field, i) => {
-                return (
-                  <div key={i} className='text-xs'>
-                    <Field {...field} />
-                  </div>
-                )
-              })}
-            </div>
+    <motion.div
+      animate={block ? 'open' : 'close'}
+      className='w-1/4 bg-slate-50 shadow-xl  border-l border-slate-200 overflow-auto relative'
+    >
+      <motion.div
+        initial={false}
+        variants={variants}
+        className='bg-slate-300 backdrop-blur-md absolute inset-0 z-10 overflow-hidden'
+      ></motion.div>
+      <motion.div
+        variants={panel}
+        initial={false}
+        className='bg-slate-50 rounded-t-xl shadow-xl absolute top-20 left-0 right-0 bottom-0 p-4 z-20'
+      >
+        <div className='flex items-center justify-between mb-4'>
+          <div>
+            <div className='text-slate-600 text-xs font-light'>{group}</div>
+            <div className='text-slate-600 text-sm font-bold'>{name}</div>
           </div>
-        </>
-      ) : null}
+          <div>
+            <Button shape='circle' size='xs' onClick={() => setSelected('')}>
+              <XMarkIcon className='h-4 w-4' />
+            </Button>
+          </div>
+        </div>
+        <div className='space-y-2'>
+          {block?.fields.map((field, i) => {
+            return (
+              <div key={i} className='text-xs'>
+                <Field {...field} />
+              </div>
+            )
+          })}
+        </div>
+      </motion.div>
       {setup}
       {/* <div className='font-semibold text-xs text-slate-600 border-b border-t border-slate-200 bg-slate-100 px-4 py-3 '>
               Section
             </div> */}
-    </div>
+    </motion.div>
   )
 }
 

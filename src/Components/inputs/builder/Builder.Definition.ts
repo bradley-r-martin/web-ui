@@ -24,7 +24,9 @@ export interface BuilderProps
     HasBlocks,
     HasId,
     HasEnhancers,
-    HasVariants {}
+    HasVariants {
+  setup?: React.ReactNode
+}
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BuilderFunctions {}

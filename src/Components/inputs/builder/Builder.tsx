@@ -22,7 +22,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
   props: BuilderProps,
   ref,
 ) => {
-  const { ...native } = props
+  const { setup, ...native } = props
 
   const screen = useState<Screen>('desktop')
 
@@ -84,7 +84,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                 </div>
               </div>
             </div>
-            <BuilderProperties {...{ input, output, blocks }} />
+            <BuilderProperties setup={setup} {...{ input, output, blocks }} />
           </div>
           <Library {...{ input, output, blocks }} />
           <BuilderToolbar handle={handle} />

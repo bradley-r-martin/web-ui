@@ -5,7 +5,9 @@ import { HasIO } from '../../../../Traits/HasIO'
 import React from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface BuilderPropertiesProps extends HasIO<BuilderIO>, HasBlocks {}
+export interface BuilderPropertiesProps extends HasIO<BuilderIO>, HasBlocks {
+  setup?: React.ReactNode
+}
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BuilderPropertiesFunctions {}

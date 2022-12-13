@@ -2,6 +2,7 @@ import { FieldFunctions, FieldProps } from './Field.Definition'
 import { InputFunctions, InputProps } from '../inputs/Input.Definition'
 import React, { forwardRef, useContext, useId, useImperativeHandle, useRef, useState } from 'react'
 
+import Conditional from '../conditional/Conditional'
 import Exception from '../exception/Exception'
 import FormContext from '../form/Form.Context'
 import Input from '../inputs/Input'
@@ -42,9 +43,11 @@ const Field: React.ForwardRefRenderFunction<FieldFunctions, FieldProps> = (
 
   return (
     <div className={classnames.component}>
-      <Label htmlFor={id} ref={labelRef} description={description}>
-        {label}
-      </Label>
+      <Conditional expression={!!label}>
+        <Label htmlFor={id} ref={labelRef} description={description}>
+          {label}
+        </Label>
+      </Conditional>
       <div className='flex flex-1 overflow-hidden'>
         <Input id={id} ref={inputRef} {...(native as InputProps)} input={input} output={output} />
         {/* {input ? <Exception>{JSON.stringify(input)}</Exception> : null} */}

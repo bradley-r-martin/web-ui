@@ -26,6 +26,7 @@ const BuilderProperties: React.ForwardRefRenderFunction<
   const variants = {
     open: {
       opacity: 1,
+      display: 'block',
       transition: {
         type: 'tween',
         damping: 10,
@@ -39,12 +40,16 @@ const BuilderProperties: React.ForwardRefRenderFunction<
         damping: 10,
         stiffness: 10,
       },
+      transitionEnd: {
+        display: 'none',
+      },
     },
   }
 
   const panel = {
     open: {
       y: '0%',
+      display: 'block',
       transition: {
         type: 'tween',
         damping: 10,
@@ -58,13 +63,16 @@ const BuilderProperties: React.ForwardRefRenderFunction<
         damping: 10,
         stiffness: 10,
       },
+      transitionEnd: {
+        display: 'none',
+      },
     },
   }
 
   return (
     <motion.div
       animate={block ? 'open' : 'close'}
-      className='w-1/4 bg-slate-50 shadow-xl  border-l border-slate-200 overflow-auto relative'
+      className='w-1/4 bg-slate-50 shadow-xl  border-l border-slate-200 overflow-hidden relative'
     >
       <motion.div
         initial={false}
@@ -74,7 +82,7 @@ const BuilderProperties: React.ForwardRefRenderFunction<
       <motion.div
         variants={panel}
         initial={false}
-        className='bg-slate-50 rounded-t-xl shadow-xl absolute top-20 left-0 right-0 bottom-0 p-4 z-20'
+        className='bg-slate-50 rounded-t-xl shadow-xl absolute top-20 left-0 right-0 bottom-0 p-4 z-30'
       >
         <div className='flex items-center justify-between mb-4'>
           <div>

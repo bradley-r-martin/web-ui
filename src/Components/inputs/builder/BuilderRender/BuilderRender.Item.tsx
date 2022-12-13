@@ -2,6 +2,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   QueueListIcon,
+  TrashIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import React, { FunctionComponent, useRef, useState } from 'react'
@@ -71,7 +72,7 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
                 setSelected('')
               }}
             >
-              <XMarkIcon className='h-4 w-4' />
+              <TrashIcon className='h-4 w-4' />
             </Button>
           </div>
           <div className='flex flex-col space-y-2 p-1 shadow-xl bg-white rounded-full group'>

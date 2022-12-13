@@ -67,7 +67,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                   transform: `scale(${scale[0]})`,
                 }}
                 className={`min-h-full mx-auto bg-white shadow-2xl w-full transition ease-in-out duration-200  ${
-                  screen[0] === 'desktop' ? 'min-w-[1200px]' : ''
+                  screen[0] === 'desktop' ? 'min-w-[1000px]' : ''
                 } ${screen[0] === 'tablet' ? 'max-w-4xl' : ''}  ${
                   screen[0] === 'phone' ? 'max-w-md' : ''
                 }  `}

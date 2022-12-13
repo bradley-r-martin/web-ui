@@ -8,7 +8,7 @@ const BuilderProperties: React.ForwardRefRenderFunction<
   BuilderPropertiesFunctions,
   BuilderPropertiesProps
 > = (props: BuilderPropertiesProps, ref) => {
-  const { blocks, input, ...native } = props
+  const { blocks, input, setup, ...native } = props
 
   const [selected] = useBuilder().selected
   const selectedBlock = input?.find((block) => block.id === selected)
@@ -32,7 +32,9 @@ const BuilderProperties: React.ForwardRefRenderFunction<
             })}
           </div>
         </>
-      ) : null}
+      ) : (
+        setup
+      )}
       {/* <div className='font-semibold text-xs text-slate-600 border-b border-t border-slate-200 bg-slate-100 px-4 py-3 '>
               Section
             </div> */}

@@ -1,24 +1,26 @@
-import { BuildingLibraryIcon, Square3Stack3DIcon } from '@heroicons/react/24/outline'
-import { LibraryFunctions, LibraryProps } from './Library.Definition'
+import { BuilderLibraryFunctions, BuilderLibraryProps } from './BuilderLibrary.Definition'
 import React, { forwardRef, useImperativeHandle } from 'react'
 
-import LibraryGroup from './Library.Group'
-import LibraryTitle from './Library.Title'
+import BuilderLibraryGroup from './BuilderLibrary.Group'
+import BuilderLibraryTitle from './BuilderLibrary.Title'
 import _ from 'lodash'
 import { motion } from 'framer-motion'
+import useBuilder from '../Builder.context'
 import { v4 as uuid } from 'uuid'
 
-const Library: React.ForwardRefRenderFunction<LibraryFunctions, LibraryProps> = (
-  props: LibraryProps,
-  ref,
-) => {
-  const { input, output, blocks, isOpen, onClose, ...native } = props
+const BuilderLibrary: React.ForwardRefRenderFunction<
+  BuilderLibraryFunctions,
+  BuilderLibraryProps
+> = (props: BuilderLibraryProps, ref) => {
+  const { input, output, blocks, ...native } = props
+
+  const [library, setBuilderLibrary] = useBuilder().library
 
   function add(block: any) {
     if (output) {
       output([...(input ?? []), { id: uuid(), namespace: block.namespace }])
     }
-    onClose()
+    setBuilderLibrary(false)
   }
 
   useImperativeHandle(ref, () => ({}))
@@ -54,15 +56,14 @@ const Library: React.ForwardRefRenderFunction<LibraryFunctions, LibraryProps> = 
 
   const groups = _.groupBy(blocks, ({ namespace }) => namespace.split('/')[0])
 
-  console.log(groups)
-
   return (
     <motion.div
-      animate={isOpen ? 'open' : 'closed'}
+      animate={library ? 'open' : 'closed'}
+      initial={false}
       variants={variants}
       className='absolute inset-0 backdrop-blur-md bg-white/30 z-20 p-3  flex flex-col overflow-hidden'
     >
-      <LibraryTitle />
+      <BuilderLibraryTitle />
       <motion.div
         variants={{
           open: {
@@ -86,7 +87,7 @@ const Library: React.ForwardRefRenderFunction<LibraryFunctions, LibraryProps> = 
       >
         {Object.keys(groups).map((group) => {
           return (
-            <LibraryGroup key={group} name={group}>
+            <BuilderLibraryGroup key={group} name={group}>
               {groups[group]?.map((block, i) => {
                 return (
                   <button
@@ -100,7 +101,7 @@ const Library: React.ForwardRefRenderFunction<LibraryFunctions, LibraryProps> = 
                   </button>
                 )
               })}
-            </LibraryGroup>
+            </BuilderLibraryGroup>
           )
         })}
       </motion.div>
@@ -108,4 +109,4 @@ const Library: React.ForwardRefRenderFunction<LibraryFunctions, LibraryProps> = 
   )
 }
 
-export default forwardRef(Library)
+export default forwardRef(BuilderLibrary)

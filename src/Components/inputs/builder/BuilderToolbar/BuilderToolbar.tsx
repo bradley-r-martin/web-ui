@@ -12,12 +12,18 @@ import React, { forwardRef, useImperativeHandle } from 'react'
 
 import { Button } from '../../../button'
 import Conditional from '../../../conditional/Conditional'
+import useBuilder from '../Builder.context'
 
 const BuilderToolbar: React.ForwardRefRenderFunction<
   BuilderToolbarFunctions,
   BuilderToolbarProps
 > = (props: BuilderToolbarProps, ref) => {
-  const { screen, setScreen, isOpen, toggleOpen, handle, scale, setScale, ...native } = props
+  const { handle, ...native } = props
+
+  const [screen, setScreen] = useBuilder().screen
+  const [library, setLibrary] = useBuilder().library
+
+  const [scale, setScale] = useBuilder().scale
 
   useImperativeHandle(ref, () => ({}))
 
@@ -26,11 +32,11 @@ const BuilderToolbar: React.ForwardRefRenderFunction<
       <div className=' rounded-full bg-white shadow-xl p-1  z-30'>
         <Button
           shape='circle'
-          intent={isOpen ? 'secondary' : 'primary'}
-          onClick={() => toggleOpen()}
+          intent={library ? 'secondary' : 'primary'}
+          onClick={() => setLibrary(!library)}
         >
           <PlusIcon
-            className={`h-4 w-4 transition ease-in-out duration-100 ${isOpen ? 'rotate-45' : ''}`}
+            className={`h-4 w-4 transition ease-in-out duration-100 ${library ? 'rotate-45' : ''}`}
             strokeWidth={4}
           />
         </Button>
@@ -72,10 +78,10 @@ const BuilderToolbar: React.ForwardRefRenderFunction<
       <div className='rounded-full flex items-center space-x-1 p-1 bg-white shadow-xl'>
         <Button
           shape='circle'
-          disabled={screen === 'mobile'}
-          intent={screen === 'mobile' ? 'secondary' : 'default'}
+          disabled={screen === 'phone'}
+          intent={screen === 'phone' ? 'secondary' : 'default'}
           size='xs'
-          onClick={() => setScreen('mobile')}
+          onClick={() => setScreen('phone')}
         >
           <DevicePhoneMobileIcon className='h-4 w-4' />
         </Button>

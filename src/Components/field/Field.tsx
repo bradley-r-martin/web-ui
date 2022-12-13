@@ -45,7 +45,7 @@ const Field: React.ForwardRefRenderFunction<FieldFunctions, FieldProps> = (
       <Label htmlFor={id} ref={labelRef} description={description}>
         {label}
       </Label>
-      <div>
+      <div className='flex flex-1 overflow-hidden'>
         <Input id={id} ref={inputRef} {...(native as InputProps)} input={input} output={output} />
         {/* {input ? <Exception>{JSON.stringify(input)}</Exception> : null} */}
       </div>

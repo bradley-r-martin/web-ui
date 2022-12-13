@@ -2,7 +2,7 @@ import classNames from 'classnames'
 
 const styles = {
   component: {
-    base: 'flex',
+    base: 'flex overflow-hidden w-full',
     inline: 'space-x-2 items-center',
     stacked: 'flex-col space-y-2',
   },

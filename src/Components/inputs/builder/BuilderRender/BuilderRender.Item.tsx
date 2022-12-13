@@ -4,25 +4,27 @@ import {
   QueueListIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import React, { FunctionComponent } from 'react'
-import { Reorder, motion, useDragControls, useMotionValue } from 'framer-motion'
+import React, { FunctionComponent, useRef, useState } from 'react'
+import { Reorder, useDragControls, useMotionValue } from 'framer-motion'
 
 import { Button } from '../../../button'
 import Conditional from '../../../conditional/Conditional'
+import Frame from 'react-frame-component'
 import { HasBlocks } from '../../../../Traits/HasBlocks'
+import useBuilder from '../Builder.context'
 import { useRaisedShadow } from '../../../../Hooks/useRaisedShadow/useRaisedShadow'
 
 interface BuilderRenderItemProps extends HasBlocks {
-  select: (id: string) => void
   remove: (id: string) => void
   move: (id: string, direction: 'up' | 'down') => void
   item: { id: string; namespace: string }
-  isSelected: boolean
 }
 
 const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => {
-  const { remove, move, select, blocks, item, isSelected } = props
+  const { remove, move, blocks, item } = props
   const block = blocks?.find(({ namespace }) => namespace === item.namespace)
+
+  const [selected, setSelected] = useBuilder().selected
 
   const Component = block?.component ?? (() => <></>)
   const controls = useDragControls()
@@ -30,20 +32,32 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
   const y = useMotionValue(0)
   const boxShadow = useRaisedShadow(y)
 
+  const [height, setHeight] = useState<number>(0)
+  const iframe = useRef<any>()
+
+  function resize() {
+    setHeight(iframe.current?.contentWindow?.document?.body?.scrollHeight)
+  }
+
   return (
     <Reorder.Item
       value={item}
       dragListener={false}
       dragControls={controls}
-      style={{ boxShadow, y, marginBottom: isSelected ? 20 : 0, marginTop: isSelected ? 20 : 0 }}
-      onClick={() => select(item.id)}
+      style={{
+        boxShadow,
+        y,
+        marginBottom: selected === item.id ? 20 : 0,
+        marginTop: selected === item.id ? 20 : 0,
+      }}
+      onClick={() => setSelected(item.id)}
       className={`p-3  rounded  ${
-        isSelected
+        selected === item.id
           ? 'border border-dotted border-slate-500 bg-white relative'
           : 'border border-transparent'
       }`}
     >
-      <Conditional expression={isSelected}>
+      <Conditional expression={selected === item.id}>
         <div className='flex flex-col absolute top-3 transform translate-x-1/2 right-0 space-y-2 '>
           <div className='p-1 shadow-xl rounded-full bg-white'>
             <Button
@@ -52,7 +66,10 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
               shape='circle'
               size='xs'
               type='button'
-              onClick={() => remove(item.id)}
+              onClick={() => {
+                remove(item.id)
+                setSelected('')
+              }}
             >
               <XMarkIcon className='h-4 w-4' />
             </Button>
@@ -73,7 +90,18 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
         </div>
       </Conditional>
       <div className='pointer-events-none select-none'>
-        {block ? <Component {...(block?.data as any)} /> : <>Component not found</>}
+        <Frame
+          ref={iframe}
+          className='min-h-full w-full'
+          initialContent='<!DOCTYPE html><html><head><script src="https://cdn.tailwindcss.com"></script></head><body><div id="mountHere"></div></body></html>'
+          mountTarget='#mountHere'
+          height={height}
+          contentDidMount={() => resize()}
+          contentDidUpdate={() => resize()}
+          scrolling='no'
+        >
+          {block ? <Component {...(block?.data as any)} /> : <>Component not found</>}
+        </Frame>
       </div>
     </Reorder.Item>
   )

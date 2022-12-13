@@ -4,9 +4,9 @@ import { BuildingLibraryIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface LibraryTitleProps {}
+interface BuilderLibraryTitleProps {}
 
-const LibraryTitle: FunctionComponent<LibraryTitleProps> = () => {
+const BuilderLibraryTitle: FunctionComponent<BuilderLibraryTitleProps> = () => {
   const variants = {
     open: {
       y: 0,
@@ -35,4 +35,4 @@ const LibraryTitle: FunctionComponent<LibraryTitleProps> = () => {
   )
 }
 
-export default LibraryTitle
+export default BuilderLibraryTitle

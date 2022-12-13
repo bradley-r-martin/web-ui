@@ -18,7 +18,7 @@ const BuilderRender: React.ForwardRefRenderFunction<BuilderRenderFunctions, Buil
   ref,
 ) => {
   const { input, output, blocks, ...native } = props
-  const [selected, setSelected] = useState<null | string>('')
+
   const inputRef = useRef<HTMLInputElement>(null)
 
   function focus() {
@@ -46,10 +46,6 @@ const BuilderRender: React.ForwardRefRenderFunction<BuilderRenderFunctions, Buil
     }
   }
 
-  function select(id: string) {
-    setSelected(id)
-  }
-
   useImperativeHandle(ref, () => ({ focus }))
 
   return (
@@ -57,15 +53,7 @@ const BuilderRender: React.ForwardRefRenderFunction<BuilderRenderFunctions, Buil
       <Reorder.Group axis='y' values={input ?? []} onReorder={output ?? (() => undefined)}>
         {(input ?? []).map((b, i) => {
           return (
-            <BuilderRenderItem
-              key={b.id}
-              move={move}
-              remove={remove}
-              select={select}
-              item={b}
-              blocks={blocks}
-              isSelected={selected === b.id}
-            />
+            <BuilderRenderItem key={b.id} move={move} remove={remove} item={b} blocks={blocks} />
           )
         })}
       </Reorder.Group>

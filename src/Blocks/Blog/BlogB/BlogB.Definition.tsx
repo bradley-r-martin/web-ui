@@ -3,7 +3,6 @@ import React from 'react'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 
-
 export interface BlogBProps {
   title: TextboxIO
 }
@@ -106,9 +105,7 @@ export function config(): TypeOfBlock<BlogBProps> {
         ></path>
       </svg>
     ),
-    fields: [
-
-    ],
+    fields: [],
     data: {
       title: 'test Title',
       image: {

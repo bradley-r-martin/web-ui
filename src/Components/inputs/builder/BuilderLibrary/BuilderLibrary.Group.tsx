@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react'
 
 import { motion } from 'framer-motion'
 
-interface LibraryGroupProps {
+interface BuilderLibraryGroupProps {
   name: string
   children: React.ReactNode
 }
 
-const LibraryGroup: FunctionComponent<LibraryGroupProps> = (props) => {
+const BuilderLibraryGroup: FunctionComponent<BuilderLibraryGroupProps> = (props) => {
   const { name, children } = props
   const variants = {
     open: {
@@ -34,4 +34,4 @@ const LibraryGroup: FunctionComponent<LibraryGroupProps> = (props) => {
   )
 }
 
-export default LibraryGroup
+export default BuilderLibraryGroup

@@ -43,7 +43,41 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
 
   const classnames = styleMap({ ...props, isChecked: input })
 
-  const blocks = [HeroA(), HeroB(), HeroC(), BlogA(), BlogB(), BlogC(), StepA(), StepB()]
+  const blocks = [
+    HeroA(),
+    HeroB(),
+    HeroC(),
+    BlogA(),
+    BlogB(),
+    BlogC(),
+    CtaA(),
+    CtaB(),
+    ContentA(),
+    ContentB(),
+    ContentC(),
+    ContentD(),
+    ContentE(),
+    ContentF(),
+    StepA(),
+    StepB(),
+    FeatureA(),
+    FeatureB(),
+    FeatureC(),
+    FeatureD(),
+    FeatureE(),
+    FeatureF(),
+    FeatureG(),
+    FeatureH(),
+    GalleryA(),
+    GalleryB(),
+    GalleryC(),
+    StatisticA(),
+    StatisticB(),
+    TeamA(),
+    TeamB(),
+    TestimonialA(),
+    TestimonialB(),
+  ]
 
   return (
     <BuilderContext.Provider value={{ screen, library, scale, selected }}>

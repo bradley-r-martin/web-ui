@@ -18,7 +18,7 @@ import { useRaisedShadow } from '../../../../Hooks/useRaisedShadow/useRaisedShad
 interface BuilderRenderItemProps extends HasBlocks {
   remove: (id: string) => void
   move: (id: string, direction: 'up' | 'down') => void
-  item: { id: string; namespace: string }
+  item: { id: string; namespace: string; data: { [key: string]: any } }
 }
 
 const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => {
@@ -101,7 +101,7 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
           contentDidUpdate={() => resize()}
           scrolling='no'
         >
-          {block ? <Component {...(block?.data as any)} /> : <>Component not found</>}
+          {block ? <Component {...(item?.data as any)} /> : <>Component not found</>}
         </Frame>
       </div>
     </Reorder.Item>

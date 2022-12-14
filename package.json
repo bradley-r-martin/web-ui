@@ -2,7 +2,7 @@
   "homepage": "http://bradley-r-martin.github.io/web-ui",
   "name": "@bradley-r-martin/web-ui",
   "private": false,
-  "version": "0.43.0",
+  "version": "0.44.0",
   "license": "CC-BY-4.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

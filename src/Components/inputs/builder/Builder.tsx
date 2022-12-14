@@ -52,7 +52,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
   const screen = useState<Screen>('desktop')
 
   const library = useState<boolean>(false)
-  const scale = useState<number>(1)
+  const scale = useState<number>(0.9)
   const selected = useState<string>('')
 
   const [input, output] = useIO({ name: props.id, output: props.output, input: props.input })
@@ -105,7 +105,16 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
   ]
 
   return (
-    <BuilderContext.Provider value={{ screen, library, scale, selected }}>
+    <BuilderContext.Provider
+      value={{
+        screen,
+        library,
+        scale,
+        selected,
+        blocks: [input, output],
+        templates: blocks,
+      }}
+    >
       <FullScreen handle={handle} className='flex flex-1 w-full'>
         <div
           className={
@@ -132,10 +141,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                 }  `}
               >
                 <div className='flex-1 bg-white flex p-8'>
-                  <div
-                    className='w-full'
-                    // onClick={() => library[0](true)}
-                  >
+                  <div className='w-full'>
                     <div className='cursor-default  w-full ' onClick={(e) => e.stopPropagation()}>
                       <BuilderRender blocks={blocks} input={input} output={output} />
                     </div>
@@ -150,9 +156,9 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                 </div>
               </div>
             </div>
-            <BuilderProperties setup={setup} {...{ input, output, blocks }} />
+            <BuilderProperties setup={setup} />
           </div>
-          <Library {...{ input, output, blocks }} />
+          <Library />
           <BuilderToolbar handle={handle} />
         </div>
       </FullScreen>

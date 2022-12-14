@@ -1,6 +1,7 @@
 import { HasEnhancers } from '../../../Traits/HasEnhancers'
 import { HasIO } from '../../../Traits/HasIO'
 import { HasId } from '../../../Traits/HasId'
+import { HasName } from '../../../Traits/HasName'
 import { HasOptions } from '../../../Traits/HasOptions'
 import { HasVariants } from '../../../Traits/HasVariants'
 import React from 'react'
@@ -10,6 +11,7 @@ export type TransferIO = null | string[]
 export interface TransferProps
   extends HasIO<TransferIO>,
     HasId,
+    HasName,
     HasOptions,
     HasEnhancers,
     HasVariants {

@@ -1,6 +1,7 @@
 import { HasEnhancers } from '../../../Traits/HasEnhancers'
 import { HasIO } from '../../../Traits/HasIO'
 import { HasId } from '../../../Traits/HasId'
+import { HasName } from '../../../Traits/HasName'
 import { HasVariants } from '../../../Traits/HasVariants'
 import Image from './Image'
 
@@ -13,7 +14,7 @@ export type ImageIO = null | {
   url: string
 }
 
-export interface ImageProps extends HasIO<ImageIO>, HasId, HasEnhancers, HasVariants {
+export interface ImageProps extends HasIO<ImageIO>, HasId, HasName, HasEnhancers, HasVariants {
   inherit?: boolean
   onUpload: (file: File) => Promise<ImageIO>
 }

@@ -11,3 +11,13 @@ export default function useBuilder() {
   }
   return context
 }
+
+export function useBlock() {
+  const [selected] = useBuilder().selected
+  const [blocks] = useBuilder().blocks
+  const templates = useBuilder().templates
+  const block = blocks?.find((block) => block.id === selected)
+  const template = templates.find((template) => template.namespace === block?.namespace)
+
+  return [block, template] as const
+}

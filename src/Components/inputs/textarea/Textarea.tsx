@@ -22,10 +22,10 @@ const Textarea: React.ForwardRefRenderFunction<TextareaFunctions, TextareaProps>
   const classnames = styleMap(props)
 
   return (
-    <>
+    <div className={classnames.area}>
       <textarea
         ref={inputRef}
-        className={classnames.input}
+        className={'w-full outline-none p-1'}
         style={{
           minHeight: 100,
           maxHeight: 400,
@@ -35,7 +35,7 @@ const Textarea: React.ForwardRefRenderFunction<TextareaFunctions, TextareaProps>
         onChange={(e) => output(e.target.value)}
         {...native}
       />
-    </>
+    </div>
   )
 }
 

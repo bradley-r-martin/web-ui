@@ -2,12 +2,14 @@ import { FieldProps } from '../../../Components/field/Field.Definition'
 import HeroA from './HeroA'
 import { ImageIO } from '../../../Components/inputs/image/Image.Definition'
 import React from 'react'
+import { TextareaIO } from '../../../Components/inputs/textarea/Textarea.Definition'
 import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 export interface HeroAProps {
   title: TextboxIO
   image: ImageIO
+  content: TextareaIO
 }
 
 export function config(): TypeOfBlock<HeroAProps> {
@@ -82,12 +84,15 @@ export function config(): TypeOfBlock<HeroAProps> {
     ),
     fields: [
       { type: 'textbox', name: 'title', label: 'Title:' } as FieldProps,
+      { type: 'textarea', name: 'content', label: 'Content:' } as FieldProps,
       { type: 'image', name: 'image', label: 'Image:' } as FieldProps,
     ],
     data: {
       title: 'test Title',
+      content:
+        'Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed acos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.',
       image: {
-        url: 'test-url',
+        url: 'https://dummyimage.com/720x600',
       },
     } as HeroAProps,
   }

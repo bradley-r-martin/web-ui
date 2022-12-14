@@ -12,13 +12,16 @@ const BuilderLibrary: React.ForwardRefRenderFunction<
   BuilderLibraryFunctions,
   BuilderLibraryProps
 > = (props: BuilderLibraryProps, ref) => {
-  const { input, output, blocks, ...native } = props
+  const { ...native } = props
 
   const [library, setBuilderLibrary] = useBuilder().library
 
+  const [blocks, output] = useBuilder().blocks
+  const templates = useBuilder().templates
+
   function add(block: any) {
     if (output) {
-      output([...(input ?? []), { id: uuid(), namespace: block.namespace }])
+      output([...(blocks ?? []), { id: uuid(), namespace: block.namespace, data: block.data }])
     }
     setBuilderLibrary(false)
   }
@@ -54,14 +57,14 @@ const BuilderLibrary: React.ForwardRefRenderFunction<
     },
   }
 
-  const groups = _.groupBy(blocks, ({ namespace }) => namespace.split('/')[0])
+  const groups = _.groupBy(templates, ({ namespace }) => namespace.split('/')[0])
 
   return (
     <motion.div
       animate={library ? 'open' : 'closed'}
       initial={false}
       variants={variants}
-      className='absolute inset-0 backdrop-blur-md bg-white/30 z-20 p-3  flex flex-col overflow-hidden'
+      className='absolute inset-0 backdrop-blur-md bg-white/30 z-30 p-3  flex flex-col overflow-hidden'
     >
       <BuilderLibraryTitle />
       <motion.div

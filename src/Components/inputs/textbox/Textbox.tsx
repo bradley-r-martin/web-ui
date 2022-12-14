@@ -23,14 +23,16 @@ const Textbox: React.ForwardRefRenderFunction<TextboxFunctions, TextboxProps> = 
   const classnames = styleMap(props)
 
   return (
-    <input
-      ref={inputRef}
-      type='text'
-      className={`${classnames.input}`}
-      {...native}
-      value={input}
-      onChange={(e) => output(e.target.value)}
-    />
+    <div className={classnames.area}>
+      <input
+        ref={inputRef}
+        type='text'
+        className={'w-full outline-none p-1'}
+        {...native}
+        value={input}
+        onChange={(e) => output(e.target.value)}
+      />
+    </div>
   )
 }
 

@@ -9,12 +9,37 @@ import { BuilderContext } from './Builder.context'
 import BuilderProperties from './BuilderProperties/BuilderProperties'
 import { BuilderRender } from './BuilderRender'
 import BuilderToolbar from './BuilderToolbar/BuilderToolbar'
+import { ContentA } from '../../../Blocks/Content/ContentA'
+import { ContentB } from '../../../Blocks/Content/ContentB'
+import { ContentC } from '../../../Blocks/Content/ContentC'
+import { ContentD } from '../../../Blocks/Content/ContentD'
+import { ContentE } from '../../../Blocks/Content/ContentE'
+import { ContentF } from '../../../Blocks/Content/ContentF'
+import { CtaA } from '../../../Blocks/Cta/CtaA'
+import { CtaB } from '../../../Blocks/Cta/CtaB'
+import { FeatureA } from '../../../Blocks/Feature/FeatureA'
+import { FeatureB } from '../../../Blocks/Feature/FeatureB'
+import { FeatureC } from '../../../Blocks/Feature/FeatureC'
+import { FeatureD } from '../../../Blocks/Feature/FeatureD'
+import { FeatureE } from '../../../Blocks/Feature/FeatureE'
+import { FeatureF } from '../../../Blocks/Feature/FeatureF'
+import { FeatureG } from '../../../Blocks/Feature/FeatureG'
+import { FeatureH } from '../../../Blocks/Feature/FeatureH'
+import { GalleryA } from '../../../Blocks/Gallery/GalleryA'
+import { GalleryB } from '../../../Blocks/Gallery/GalleryB'
+import { GalleryC } from '../../../Blocks/Gallery/GalleryC'
 import { HeroA } from '../../../Blocks/Hero/HeroA'
 import { HeroB } from '../../../Blocks/Hero/HeroB'
 import { HeroC } from '../../../Blocks/Hero/HeroC'
 import Library from './BuilderLibrary/BuilderLibrary'
+import { StatisticA } from '../../../Blocks/Statistic/StatisticA'
+import { StatisticB } from '../../../Blocks/Statistic/StatisticB'
 import { StepA } from '../../../Blocks/Step/StepA'
 import { StepB } from '../../../Blocks/Step/StepB'
+import { TeamA } from '../../../Blocks/Team/TeamA'
+import { TeamB } from '../../../Blocks/Team/TeamB'
+import { TestimonialA } from '../../../Blocks/Testimonial/TestimonialA'
+import { TestimonialB } from '../../../Blocks/Testimonial/TestimonialB'
 import { styleMap } from './Builder.Styles'
 import { useIO } from '../../../Hooks/useIO/useIO'
 
@@ -43,7 +68,41 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
 
   const classnames = styleMap({ ...props, isChecked: input })
 
-  const blocks = [HeroA(), HeroB(), HeroC(), BlogA(), BlogB(), BlogC(), StepA(), StepB()]
+  const blocks = [
+    HeroA(),
+    HeroB(),
+    HeroC(),
+    BlogA(),
+    BlogB(),
+    BlogC(),
+    CtaA(),
+    CtaB(),
+    ContentA(),
+    ContentB(),
+    ContentC(),
+    ContentD(),
+    ContentE(),
+    ContentF(),
+    StepA(),
+    StepB(),
+    FeatureA(),
+    FeatureB(),
+    FeatureC(),
+    FeatureD(),
+    FeatureE(),
+    FeatureF(),
+    FeatureG(),
+    FeatureH(),
+    GalleryA(),
+    GalleryB(),
+    GalleryC(),
+    StatisticA(),
+    StatisticB(),
+    TeamA(),
+    TeamB(),
+    TestimonialA(),
+    TestimonialB(),
+  ]
 
   return (
     <BuilderContext.Provider value={{ screen, library, scale, selected }}>
@@ -66,20 +125,27 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                 style={{
                   transform: `scale(${scale[0]})`,
                 }}
-                className={`min-h-full mx-auto bg-white shadow-2xl w-full transition ease-in-out duration-200  ${
+                className={`min-h-full mx-auto bg-white flex shadow-2xl w-full transition ease-in-out duration-200  ${
                   screen[0] === 'desktop' ? 'min-w-[1000px]' : ''
                 } ${screen[0] === 'tablet' ? 'max-w-4xl' : ''}  ${
                   screen[0] === 'phone' ? 'max-w-md' : ''
                 }  `}
               >
-                <div className='flex-1 bg-white  p-8'>
+                <div className='flex-1 bg-white flex p-8'>
                   <div
-                    className='pb-20 cursor-text'
+                    className='w-full'
                     // onClick={() => library[0](true)}
                   >
-                    <div className='cursor-default' onClick={(e) => e.stopPropagation()}>
+                    <div className='cursor-default  w-full ' onClick={(e) => e.stopPropagation()}>
                       <BuilderRender blocks={blocks} input={input} output={output} />
                     </div>
+                    <button
+                      type='button'
+                      className='cursor-text flex w-full min-h-[100px] rounded text-white items-center justify-center hover:bg-sky-100 hover:text-sky-400 mb-20'
+                      onClick={() => library[1](true)}
+                    >
+                      Click to add block
+                    </button>
                   </div>
                 </div>
               </div>

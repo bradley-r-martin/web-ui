@@ -99,7 +99,8 @@ const BuilderProperties: React.ForwardRefRenderFunction<
           {block?.fields.map((field, i) => {
             return (
               <div key={i} className='text-xs'>
-                <Field {...field} />
+                {JSON.stringify(input)}
+                <Field name='0.namespace' {...field} />
               </div>
             )
           })}

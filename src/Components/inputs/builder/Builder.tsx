@@ -66,20 +66,27 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                 style={{
                   transform: `scale(${scale[0]})`,
                 }}
-                className={`min-h-full mx-auto bg-white shadow-2xl w-full transition ease-in-out duration-200  ${
+                className={`min-h-full mx-auto bg-white flex shadow-2xl w-full transition ease-in-out duration-200  ${
                   screen[0] === 'desktop' ? 'min-w-[1000px]' : ''
                 } ${screen[0] === 'tablet' ? 'max-w-4xl' : ''}  ${
                   screen[0] === 'phone' ? 'max-w-md' : ''
                 }  `}
               >
-                <div className='flex-1 bg-white  p-8'>
+                <div className='flex-1 bg-white flex p-8'>
                   <div
-                    className='pb-20 cursor-text'
+                    className='w-full'
                     // onClick={() => library[0](true)}
                   >
-                    <div className='cursor-default' onClick={(e) => e.stopPropagation()}>
+                    <div className='cursor-default  w-full ' onClick={(e) => e.stopPropagation()}>
                       <BuilderRender blocks={blocks} input={input} output={output} />
                     </div>
+                    <button
+                      type='button'
+                      className='cursor-text flex w-full min-h-[100px] rounded text-white items-center justify-center hover:bg-sky-100 hover:text-sky-400 mb-20'
+                      onClick={() => library[1](true)}
+                    >
+                      Click to add block
+                    </button>
                   </div>
                 </div>
               </div>

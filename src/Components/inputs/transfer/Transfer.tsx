@@ -1,4 +1,9 @@
-import { ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  MagnifyingGlassIcon,
+  QueueListIcon,
+} from '@heroicons/react/24/outline'
 import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { TransferFunctions, TransferProps } from './Transfer.Definition'
 
@@ -107,14 +112,18 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
             .filter((option) => selected.includes(option.id))
             .map((option) => {
               return (
-                <button
-                  type='button'
-                  key={option.id}
-                  onClick={() => remove(option.id)}
-                  className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex'
-                >
-                  {props?.item ? props.item(option) : option.text}
-                </button>
+                <div key={option.id} className='flex items-center justify-between space-x-2'>
+                  <button
+                    type='button'
+                    onClick={() => remove(option.id)}
+                    className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex flex-1 items-center justify-between'
+                  >
+                    {props?.item ? props.item(option) : option.text}
+                  </button>
+                  <button type='button' className='cursor-move'>
+                    <QueueListIcon className='h-4 w-4' />
+                  </button>
+                </div>
               )
             })}
         </div>

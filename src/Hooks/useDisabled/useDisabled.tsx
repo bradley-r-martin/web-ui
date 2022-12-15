@@ -1,13 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
-import { UseDisabledProps } from './useDisabled.Definition'
-
 export const DisabledContext = createContext<any>(null)
 
-export function useDisabled(props: UseDisabledProps) {
-  const { disabled, inherit } = props
+export function useDisabled(disabled?: boolean) {
   const inheritedContext = useContext(DisabledContext)
-  const isInherited = inherit && inheritedContext !== null
+  const isInherited = inheritedContext !== null
 
   // The default is always the direct property as it take priority unless it is
   // undefined and then the inherited property is used.
@@ -25,6 +22,7 @@ export function useDisabled(props: UseDisabledProps) {
   function context({ children }: any) {
     return <DisabledContext.Provider value={isDisabled}>{children}</DisabledContext.Provider>
   }
+
   useEffect(() => {
     // if the direct property changes then update the state to reflect the change.
     // if the inherited property changes and the direct property is undefined then update the state.

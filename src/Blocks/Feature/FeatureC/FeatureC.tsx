@@ -15,7 +15,7 @@ const FeatureC: FunctionComponent<FeatureCProps> = (props) => {
         </div>
         <div className='flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center'>
           <div className='flex flex-col mb-10 lg:items-start items-center'>
-            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5'>
+            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-sky-500 mb-5'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -34,7 +34,7 @@ const FeatureC: FunctionComponent<FeatureCProps> = (props) => {
                 Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub
                 indxgo juice poutine.
               </p>
-              <a className='mt-3 text-indigo-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'
@@ -51,7 +51,7 @@ const FeatureC: FunctionComponent<FeatureCProps> = (props) => {
             </div>
           </div>
           <div className='flex flex-col mb-10 lg:items-start items-center'>
-            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5'>
+            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-sky-500 mb-5'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -72,7 +72,7 @@ const FeatureC: FunctionComponent<FeatureCProps> = (props) => {
                 Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub
                 indxgo juice poutine.
               </p>
-              <a className='mt-3 text-indigo-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'
@@ -89,7 +89,7 @@ const FeatureC: FunctionComponent<FeatureCProps> = (props) => {
             </div>
           </div>
           <div className='flex flex-col mb-10 lg:items-start items-center'>
-            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5'>
+            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-sky-500 mb-5'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -109,7 +109,7 @@ const FeatureC: FunctionComponent<FeatureCProps> = (props) => {
                 Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub
                 indxgo juice poutine.
               </p>
-              <a className='mt-3 text-indigo-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'

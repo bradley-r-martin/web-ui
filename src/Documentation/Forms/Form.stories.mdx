@@ -1,0 +1,29 @@
+<!-- Form.stories.mdx -->
+
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import Form from '../../Components/form/Form'
+import FormControlled from './Form.Controlled'
+import FormUncontrolled from './Form.Uncontrolled'
+
+<Meta title='Components/Form' argTypes={{}} component={Form} />
+
+# Form
+
+Let's define a story for our `Badge` component
+
+```javascript
+import { Form } from '@bradley-r-martin/web-ui'
+```
+
+## Controlled form
+
+<Canvas>
+  <FormControlled />
+</Canvas>
+
+## Uncontrolled Form
+
+<Canvas>
+  <FormUncontrolled />
+</Canvas>

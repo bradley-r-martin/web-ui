@@ -147,7 +147,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
                     </div>
                     <button
                       type='button'
-                      className='cursor-text flex w-full min-h-[100px] rounded text-white items-center justify-center hover:bg-sky-100 hover:text-sky-400 mb-20'
+                      className='cursor-text flex w-full min-h-[100px] rounded text-white items-center justify-center hover:bg-sky-50 hover:text-sky-400 mb-20'
                       onClick={() => library[1](true)}
                     >
                       Click to add block

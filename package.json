@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.12",
+    "@tanem/react-nprogress": "^5.0.20",
     "@types/laravel-vapor": "^0.6.0",
     "@types/lodash": "^4.14.186",
     "axios": "^1.1.3",

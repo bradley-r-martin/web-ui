@@ -16,10 +16,10 @@ const ContentD: FunctionComponent<ContentDProps> = (props) => {
             squid meh taiyaki drinking vinegar tacos.
           </p>
           <div className='flex md:mt-4 mt-6'>
-            <button className='inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded'>
+            <button className='inline-flex text-white bg-sky-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded'>
               Button
             </button>
-            <a className='text-indigo-500 inline-flex items-center ml-4'>
+            <a className='text-sky-500 inline-flex items-center ml-4'>
               Learn More
               <svg
                 fill='none'

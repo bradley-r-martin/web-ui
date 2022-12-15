@@ -16,7 +16,7 @@ export type ImageIO = null | {
 
 export interface ImageProps extends HasIO<ImageIO>, HasId, HasName, HasEnhancers, HasVariants {
   inherit?: boolean
-  onUpload: (file: File) => Promise<ImageIO>
+  onUpload?: (file: File) => Promise<ImageIO>
 }
 
 export type ImageFunctions = {

@@ -10,7 +10,7 @@ const Label: React.ForwardRefRenderFunction<LabelFunctions, LabelProps> = (
 ) => {
   const { children, disabled, description, ...native } = props
 
-  const { isDisabled, enable, disable } = useDisabled({ disabled })
+  const { isDisabled, enable, disable } = useDisabled(disabled)
 
   useImperativeHandle(ref, () => ({ enable, disable }))
 

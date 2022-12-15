@@ -14,8 +14,12 @@ const styles = {
 }
 
 export function styleMap(props: any) {
-  const { variant = 'outlined' } = props
+  const { variant = 'outlined', isDisabled } = props
   return {
+    area: classNames({
+      [input.area.interactability.disabled]: isDisabled,
+      [input.area.interactability.enabled]: !isDisabled,
+    }),
     input: classNames({
       [styles.input.base]: true,
       [input.area.base]: true,

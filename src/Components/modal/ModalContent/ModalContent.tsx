@@ -1,12 +1,62 @@
 import React, { FunctionComponent } from 'react'
 
 import { ModalContentProps } from './ModalContent.Definition'
+import { NProgress } from '@tanem/react-nprogress'
+import { motion } from 'framer-motion'
 
 const ModalContent: FunctionComponent<ModalContentProps> = (props) => {
-  const { children, className, ...native } = props
+  const { children, className, loading, ...native } = props
   return (
-    <div className={`bg-gray-50 border-y border-gray-200 ${className}`} {...native}>
-      {children}
+    <div className={`bg-gray-50  ${className}`} {...native}>
+      <div className='relative overflow-hidden'>
+        <NProgress isAnimating={loading}>
+          {({ animationDuration, isFinished, progress }) => (
+            <div
+              style={{
+                opacity: isFinished ? 0 : 1,
+                pointerEvents: 'none',
+                transition: `opacity ${animationDuration}ms linear`,
+              }}
+            >
+              <div
+                style={{
+                  height: 2,
+                  left: 0,
+                  marginLeft: `${(-1 + progress) * 100}%`,
+                  position: 'absolute',
+                  top: 0,
+                  transition: `margin-left ${animationDuration}ms linear`,
+                  width: '100%',
+                  zIndex: 1031,
+                }}
+                className='bg-sky-500'
+              >
+                <div
+                  style={{
+                    boxShadow: '0 0 10px #29d, 0 0 5px #29d',
+                    display: 'block',
+                    height: '100%',
+                    opacity: 1,
+                    position: 'absolute',
+                    right: 0,
+                    transform: 'rotate(3deg) translate(0px, -4px)',
+                    width: 100,
+                  }}
+                />
+              </div>
+            </div>
+          )}
+        </NProgress>
+        <div className='p-5'>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            transition={{ delay: 0 }}
+            animate={{ y: !loading ? 0 : 50, opacity: !loading ? 1 : 0 }}
+          >
+            {children}
+          </motion.div>
+        </div>
+      </div>
     </div>
   )
 }

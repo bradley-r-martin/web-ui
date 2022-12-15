@@ -1,8 +1,8 @@
 import CtaB from './CtaB'
 import { FieldProps } from '../../../Components/field/Field.Definition'
 import { ImageIO } from '../../../Components/inputs/image/Image.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -28,7 +28,7 @@ export function config(): TypeOfBlock<CtaBProps> {
           height='5'
           rx='2.5'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></rect>
         <rect

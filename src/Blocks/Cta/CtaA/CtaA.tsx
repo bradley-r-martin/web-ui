@@ -10,7 +10,7 @@ const CtaA: FunctionComponent<CtaAProps> = (props) => {
           <h1 className='flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900'>
             Slow-carb next level shoindxgoitch ethical authentic, scenester sriracha forage.
           </h1>
-          <button className='flex-shrink-0 text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0'>
+          <button className='flex-shrink-0 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0'>
             Button
           </button>
         </div>

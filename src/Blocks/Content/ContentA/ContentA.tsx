@@ -7,7 +7,7 @@ const ContentA: FunctionComponent<ContentAProps> = (props) => {
     <section className='text-gray-600 body-font'>
       <div className='container px-5 py-24 mx-auto'>
         <div className='flex flex-col text-center w-full mb-20'>
-          <h2 className='text-xs text-sky-500 tracking-widest font-medium title-font mb-1'>
+          <h2 className='text-xs text-blue-500 tracking-widest font-medium title-font mb-1'>
             ROOF PARTY POLAROID
           </h2>
           <h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900'>
@@ -28,7 +28,7 @@ const ContentA: FunctionComponent<ContentAProps> = (props) => {
               Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison
               bulbche.
             </p>
-            <a className='text-sky-500 inline-flex items-center'>
+            <a className='text-blue-500 inline-flex items-center'>
               Learn More
               <svg
                 fill='none'
@@ -51,7 +51,7 @@ const ContentA: FunctionComponent<ContentAProps> = (props) => {
               Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison
               bulbche.
             </p>
-            <a className='text-sky-500 inline-flex items-center'>
+            <a className='text-blue-500 inline-flex items-center'>
               Learn More
               <svg
                 fill='none'
@@ -74,7 +74,7 @@ const ContentA: FunctionComponent<ContentAProps> = (props) => {
               Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison
               bulbche.
             </p>
-            <a className='text-sky-500 inline-flex items-center'>
+            <a className='text-blue-500 inline-flex items-center'>
               Learn More
               <svg
                 fill='none'
@@ -97,7 +97,7 @@ const ContentA: FunctionComponent<ContentAProps> = (props) => {
               Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison
               bulbche.
             </p>
-            <a className='text-sky-500 inline-flex items-center'>
+            <a className='text-blue-500 inline-flex items-center'>
               Learn More
               <svg
                 fill='none'
@@ -113,7 +113,7 @@ const ContentA: FunctionComponent<ContentAProps> = (props) => {
             </a>
           </div>
         </div>
-        <button className='flex mx-auto mt-16 text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
+        <button className='flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
           Button
         </button>
       </div>

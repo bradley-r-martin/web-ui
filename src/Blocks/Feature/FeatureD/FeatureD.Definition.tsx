@@ -1,7 +1,7 @@
 import FeatureD from './FeatureD'
 import { FieldProps } from '../../../Components/field/Field.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -46,7 +46,7 @@ export function config(): TypeOfBlock<FeatureDProps> {
           d='M44 86.5a1.5 1.5 0 011.5-1.5h19a1.5 1.5 0 010 3h-19a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='44'
@@ -85,7 +85,7 @@ export function config(): TypeOfBlock<FeatureDProps> {
           d='M162 86.5a1.5 1.5 0 011.5-1.5h19a1.5 1.5 0 010 3h-19a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='162'

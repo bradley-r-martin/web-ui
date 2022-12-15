@@ -1,7 +1,7 @@
-import TestimonialA from './TestimonialA'
 import { FieldProps } from '../../../Components/field/Field.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import TestimonialA from './TestimonialA'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -42,7 +42,7 @@ export function config(): TypeOfBlock<TestimonialAProps> {
           height='2'
           rx='1'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></rect>
         <rect

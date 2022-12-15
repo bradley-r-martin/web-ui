@@ -27,11 +27,11 @@ const styles = {
       },
       primary: {
         filled:
-          'shadow bg-sky-500 hover:bg-sky-600 active:bg-sky-800 focus-visible:outline-sky-800 text-white',
+          'shadow bg-blue-500 hover:bg-sky-600 active:bg-sky-800 focus-visible:outline-sky-800 text-white',
         outlined:
-          'shadow bg-transparent border-sky-500 hover:border-sky-600 hover:ring-1 hover:ring-inset ring-sky-600 active:bg-sky-50 active:border-sky-800 focus-visible:outline-sky-800 text-sky-700',
+          'shadow bg-transparent border-blue-500 hover:border-sky-600 hover:ring-1 hover:ring-inset ring-sky-600 active:bg-sky-50 active:border-sky-800 focus-visible:outline-sky-800 text-sky-700',
         transparent:
-          'text-sky-500 bg-transparent hover:text-sky-600 active:bg-sky-50 focus-visible:outline-sky-800 active:text-sky-800',
+          'text-blue-500 bg-transparent hover:text-sky-600 active:bg-sky-50 focus-visible:outline-sky-800 active:text-sky-800',
       },
       secondary: {
         filled:

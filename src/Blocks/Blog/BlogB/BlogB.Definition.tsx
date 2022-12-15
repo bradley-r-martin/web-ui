@@ -1,7 +1,7 @@
 import BlogB from './BlogB'
 import React from 'react'
-import TypeOfBlock from '../../../Types/TypeOfBlock'
 import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
+import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 export interface BlogBProps {
   title: TextboxIO
@@ -39,7 +39,7 @@ export function config(): TypeOfBlock<BlogBProps> {
           d='M48 83a1 1 0 011-1h11a1 1 0 110 2H49a1 1 0 01-1-1z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <path
           d='M37 67.5a1.5 1.5 0 011.5-1.5h32a1.5 1.5 0 010 3h-32a1.5 1.5 0 01-1.5-1.5z'
@@ -67,7 +67,7 @@ export function config(): TypeOfBlock<BlogBProps> {
           d='M127 83a1 1 0 011-1h11a1 1 0 010 2h-11a1 1 0 01-1-1z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <path
           d='M116 67.5a1.5 1.5 0 011.5-1.5h32a1.5 1.5 0 010 3h-32a1.5 1.5 0 01-1.5-1.5z'
@@ -95,7 +95,7 @@ export function config(): TypeOfBlock<BlogBProps> {
           d='M206 83a1 1 0 011-1h11a1 1 0 010 2h-11a1 1 0 01-1-1z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <path
           d='M195 67.5a1.5 1.5 0 011.5-1.5h32a1.5 1.5 0 010 3h-32a1.5 1.5 0 01-1.5-1.5z'

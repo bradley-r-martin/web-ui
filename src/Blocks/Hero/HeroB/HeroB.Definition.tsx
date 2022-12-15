@@ -39,7 +39,7 @@ export function config(): TypeOfBlock<HeroBProps> {
           rx='2'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></rect>
         <rect
           x='81'

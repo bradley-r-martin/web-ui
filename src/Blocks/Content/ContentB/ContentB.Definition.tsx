@@ -94,7 +94,7 @@ export function config(): TypeOfBlock<ContentBProps> {
           height='2'
           rx='1'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <rect
@@ -140,7 +140,7 @@ export function config(): TypeOfBlock<ContentBProps> {
           height='2'
           rx='1'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <rect
@@ -186,7 +186,7 @@ export function config(): TypeOfBlock<ContentBProps> {
           height='2'
           rx='1'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <rect
@@ -232,7 +232,7 @@ export function config(): TypeOfBlock<ContentBProps> {
           height='2'
           rx='1'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
       </svg>

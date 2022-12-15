@@ -28,7 +28,7 @@ export function config(): TypeOfBlock<CtaBProps> {
           height='5'
           rx='2.5'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <rect

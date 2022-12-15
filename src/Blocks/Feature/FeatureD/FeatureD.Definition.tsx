@@ -46,7 +46,7 @@ export function config(): TypeOfBlock<FeatureDProps> {
           d='M44 86.5a1.5 1.5 0 011.5-1.5h19a1.5 1.5 0 010 3h-19a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <rect
           x='44'
@@ -85,7 +85,7 @@ export function config(): TypeOfBlock<FeatureDProps> {
           d='M162 86.5a1.5 1.5 0 011.5-1.5h19a1.5 1.5 0 010 3h-19a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <rect
           x='162'

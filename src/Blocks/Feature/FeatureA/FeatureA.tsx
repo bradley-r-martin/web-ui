@@ -13,7 +13,7 @@ const FeatureA: FunctionComponent<FeatureAProps> = (props) => {
         </h1>
         <div className='flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6'>
           <div className='p-4 md:w-1/3 flex'>
-            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-blue-500 mb-4 flex-shrink-0'>
+            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-sky-500 mb-4 flex-shrink-0'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -33,7 +33,7 @@ const FeatureA: FunctionComponent<FeatureAProps> = (props) => {
                 indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland
                 kickstarter tumblr live-edge tilde.
               </p>
-              <a className='mt-3 text-blue-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'
@@ -50,7 +50,7 @@ const FeatureA: FunctionComponent<FeatureAProps> = (props) => {
             </div>
           </div>
           <div className='p-4 md:w-1/3 flex'>
-            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-blue-500 mb-4 flex-shrink-0'>
+            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-sky-500 mb-4 flex-shrink-0'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -72,7 +72,7 @@ const FeatureA: FunctionComponent<FeatureAProps> = (props) => {
                 indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland
                 kickstarter tumblr live-edge tilde.
               </p>
-              <a className='mt-3 text-blue-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'
@@ -89,7 +89,7 @@ const FeatureA: FunctionComponent<FeatureAProps> = (props) => {
             </div>
           </div>
           <div className='p-4 md:w-1/3 flex'>
-            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-blue-500 mb-4 flex-shrink-0'>
+            <div className='w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-sky-500 mb-4 flex-shrink-0'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -110,7 +110,7 @@ const FeatureA: FunctionComponent<FeatureAProps> = (props) => {
                 indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland
                 kickstarter tumblr live-edge tilde.
               </p>
-              <a className='mt-3 text-blue-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'

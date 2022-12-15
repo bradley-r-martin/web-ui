@@ -56,7 +56,7 @@ export function config(): TypeOfBlock<ContentDProps> {
         <path
           d='M190 89a2 2 0 012-2h20a2 2 0 110 4h-20a2 2 0 01-2-2z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <rect
@@ -66,7 +66,7 @@ export function config(): TypeOfBlock<ContentDProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
       </svg>

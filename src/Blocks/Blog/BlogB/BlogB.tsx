@@ -19,7 +19,7 @@ const BlogB: FunctionComponent<BlogBProps> = (props) => {
                 Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled
                 waistcoat.
               </p>
-              <a className='text-blue-500 inline-flex items-center'>
+              <a className='text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   className='w-4 h-4 ml-2'
@@ -79,7 +79,7 @@ const BlogB: FunctionComponent<BlogBProps> = (props) => {
                 Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled
                 waistcoat.
               </p>
-              <a className='text-blue-500 inline-flex items-center'>
+              <a className='text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   className='w-4 h-4 ml-2'
@@ -139,7 +139,7 @@ const BlogB: FunctionComponent<BlogBProps> = (props) => {
                 Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled
                 waistcoat.
               </p>
-              <a className='text-blue-500 inline-flex items-center'>
+              <a className='text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   className='w-4 h-4 ml-2'

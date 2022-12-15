@@ -22,7 +22,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
             </h2>
             <nav className='flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5'>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -38,7 +38,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 First Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -54,7 +54,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Second Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -70,7 +70,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Third Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -86,7 +86,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Fourth Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -109,7 +109,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
             </h2>
             <nav className='flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5'>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -125,7 +125,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 First Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -141,7 +141,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Second Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -157,7 +157,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Third Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -173,7 +173,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Fourth Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -196,7 +196,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
             </h2>
             <nav className='flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5'>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -212,7 +212,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 First Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -228,7 +228,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Second Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -244,7 +244,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Third Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -260,7 +260,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Fourth Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -283,7 +283,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
             </h2>
             <nav className='flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5'>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -299,7 +299,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 First Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -315,7 +315,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Second Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -331,7 +331,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Third Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -347,7 +347,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
                 Fourth Link
               </a>
               <a>
-                <span className='bg-indigo-100 text-blue-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                <span className='bg-indigo-100 text-sky-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
                   <svg
                     fill='none'
                     stroke='currentColor'
@@ -365,7 +365,7 @@ const FeatureH: FunctionComponent<FeatureHProps> = (props) => {
             </nav>
           </div>
         </div>
-        <button className='flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
+        <button className='flex mx-auto mt-16 text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
           Button
         </button>
       </div>

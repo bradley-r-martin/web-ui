@@ -34,7 +34,7 @@ export function config(): TypeOfBlock<ContentFProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <path
@@ -73,7 +73,7 @@ export function config(): TypeOfBlock<ContentFProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <path

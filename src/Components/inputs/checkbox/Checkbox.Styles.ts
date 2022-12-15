@@ -18,7 +18,7 @@ const styles = {
       enabled: '',
     },
     state: {
-      checked: 'scale-100 bg-blue-500',
+      checked: 'scale-100 bg-sky-500',
       unchecked: 'scale-0 bg-white',
     },
   },

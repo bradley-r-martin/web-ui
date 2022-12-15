@@ -26,7 +26,7 @@ export function config(): TypeOfBlock<StatisticBProps> {
         <path
           d='M50 75a5 5 0 11-10 0 5 5 0 0110 0z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -52,7 +52,7 @@ export function config(): TypeOfBlock<StatisticBProps> {
         <path
           d='M109 75a5 5 0 11-10 0 5 5 0 0110 0z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -78,7 +78,7 @@ export function config(): TypeOfBlock<StatisticBProps> {
         <path
           d='M168 75a5 5 0 11-10 0 5 5 0 0110 0z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -104,7 +104,7 @@ export function config(): TypeOfBlock<StatisticBProps> {
         <path
           d='M227 75a5 5 0 11-10 0 5 5 0 0110 0z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -170,7 +170,7 @@ export function config(): TypeOfBlock<StatisticBProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
       </svg>

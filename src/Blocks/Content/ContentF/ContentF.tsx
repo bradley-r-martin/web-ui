@@ -22,7 +22,7 @@ const ContentF: FunctionComponent<ContentFProps> = (props) => {
               Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch,
               slow-carb neutra irony.
             </p>
-            <button className='flex mx-auto mt-6 text-white bg-blue-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded'>
+            <button className='flex mx-auto mt-6 text-white bg-sky-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded'>
               Button
             </button>
           </div>
@@ -41,7 +41,7 @@ const ContentF: FunctionComponent<ContentFProps> = (props) => {
               Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch,
               slow-carb neutra irony.
             </p>
-            <button className='flex mx-auto mt-6 text-white bg-blue-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded'>
+            <button className='flex mx-auto mt-6 text-white bg-sky-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded'>
               Button
             </button>
           </div>

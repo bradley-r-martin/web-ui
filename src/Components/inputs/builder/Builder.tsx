@@ -47,7 +47,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
   props: BuilderProps,
   ref,
 ) => {
-  const { setup, ...native } = props
+  const { setup, head, ...native } = props
 
   const screen = useState<Screen>('desktop')
 
@@ -113,6 +113,7 @@ const Builder: React.ForwardRefRenderFunction<BuilderFunctions, BuilderProps> = 
         selected,
         blocks: [input, output],
         templates: blocks,
+        head,
       }}
     >
       <FullScreen handle={handle} className='flex flex-1 w-full'>

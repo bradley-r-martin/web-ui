@@ -5,6 +5,7 @@ import {
   DevicePhoneMobileIcon,
   DeviceTabletIcon,
   MinusIcon,
+  PlusCircleIcon,
   PlusIcon,
 } from '@heroicons/react/24/outline'
 import { BuilderToolbarFunctions, BuilderToolbarProps } from './BuilderToolbar.Definition'
@@ -104,6 +105,21 @@ const BuilderToolbar: React.ForwardRefRenderFunction<
           <ComputerDesktopIcon className='h-4 w-4' />
         </Button>
       </div>
+
+      {/* <div className=' rounded-full bg-white shadow-xl  flex'>
+        <Button shape='circle' size='xs' variant='transparent'>
+          <img src='https://hatscripts.github.io/circle-flags/flags/au.svg' width='20' />
+        </Button>
+        <Button shape='circle' size='xs' variant='transparent'>
+          <img src='https://hatscripts.github.io/circle-flags/flags/cn.svg' width='20' />
+        </Button>
+        <Button shape='circle' size='xs' variant='transparent'>
+          <img src='https://hatscripts.github.io/circle-flags/flags/id.svg' width='20' />
+        </Button>
+        <Button shape='circle' size='xs' variant='transparent'>
+          <PlusCircleIcon className='h-4 w-4' />
+        </Button>
+      </div> */}
     </div>
   )
 }

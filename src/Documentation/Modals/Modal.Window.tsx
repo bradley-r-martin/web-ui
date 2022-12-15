@@ -19,10 +19,10 @@ const ModalHero: FunctionComponent = () => {
   }
   return (
     <>
-      <Button onClick={() => open()}>Open</Button>
+      <Button onClick={() => open()}>Window</Button>
       <Conditional expression={isOpen}>
-        <Form locked={false}>
-          <Modal size='lg:w-1/3'>
+        <Modal size='lg:w-1/3'>
+          <Form locked={false}>
             <Modal.Header>
               <Modal.Title title='Contained' />
             </Modal.Header>
@@ -37,8 +37,8 @@ const ModalHero: FunctionComponent = () => {
                 Save
               </Button>
             </Modal.Footer>
-          </Modal>
-        </Form>
+          </Form>
+        </Modal>
       </Conditional>
     </>
   )

@@ -20,7 +20,7 @@ import { useForm } from '../../Hooks/useForm'
 */
 
 const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: FormProps, ref) => {
-  const { children, locked, debug, disabled, ...native } = props
+  const { children, locked, debug, disabled, className, ...native } = props
 
   const { enable, disable, isDisabled, DisabledContext } = useDisabled(disabled)
 
@@ -49,7 +49,9 @@ const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: F
     <DisabledContext>
       <FormContext.Provider value={{ get, set }}>
         <FocusTrap active={locked} focusTrapOptions={{ escapeDeactivates: false }}>
-          <div {...native}>{children}</div>
+          <form {...native} className={`${className ?? ''} divide-y divide-gray-200`}>
+            {children}
+          </form>
         </FocusTrap>
         <Conditional expression={!!debug}>
           <div

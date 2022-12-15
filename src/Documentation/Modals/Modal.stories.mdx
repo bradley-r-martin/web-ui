@@ -2,9 +2,11 @@
 
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
 
-import Modal from '../Components/modal/Modal'
-import Button from '../Components/button/Button'
-import ModalContained from './examples/ModalContained'
+import Modal from '../../Components/modal/Modal'
+import Button from '../../Components/button/Button'
+import ModalHero from './Modal.Hero'
+import ModalPopup from './Modal.Popup'
+import ModalWindow from './Modal.Window'
 
 <Meta title='Components/Modal' argTypes={{}} component={Modal} />
 
@@ -16,8 +18,10 @@ Let's define a story for our `Badge` component
 import { Modal } from '@bradley-r-martin/web-ui'
 ```
 
-## Intents
+## Hero
 
 <Canvas>
-  <ModalContained />
+  <ModalHero />
+  <ModalWindow />
+  <ModalPopup />
 </Canvas>

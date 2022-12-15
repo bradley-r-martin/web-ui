@@ -5,6 +5,7 @@ import React, { createRef, forwardRef, useImperativeHandle } from 'react'
 import { Button } from '../../button'
 import Conditional from '../../conditional/Conditional'
 import { styleMap } from './Image.Styles'
+import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
 import { useEnhancer } from '../../../Hooks/useEnhancer/useEnhancer'
 import { useFile } from '../../../Hooks/useFileStaging/useFile'
 import { useIO } from '../../../Hooks/useIO/useIO'
@@ -17,7 +18,7 @@ const Image: React.ForwardRefRenderFunction<ImageFunctions, ImageProps> = (props
   const [preview, upload, { uploading, progress, error }] = useFile({ value: input, onUpload })
 
   const inputRef = createRef<HTMLInputElement>()
-
+  const { isDisabled } = useDisabled()
   function change(e: React.ChangeEvent<HTMLInputElement>) {
     const [file] = e.currentTarget.files ?? []
 
@@ -36,11 +37,12 @@ const Image: React.ForwardRefRenderFunction<ImageFunctions, ImageProps> = (props
     enhancers: props.enhancers,
   })
 
-  const classnames = styleMap(props)
+  const classnames = styleMap({ ...props, isDisabled })
 
   return (
     <>
       <div
+        className={classnames.area}
         onMouseDown={(e) => {
           e.preventDefault()
           focus()

@@ -3,6 +3,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { styleMap } from './Radio.Styles'
+import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
 import { useIO } from '../../../Hooks/useIO/useIO'
 
 const Radio: React.ForwardRefRenderFunction<RadioFunctions, RadioProps> = (
@@ -13,6 +14,8 @@ const Radio: React.ForwardRefRenderFunction<RadioFunctions, RadioProps> = (
 
   const inputRef = useRef<HTMLInputElement>(null)
 
+  const { isDisabled } = useDisabled()
+
   function focus() {
     inputRef.current?.focus()
   }
@@ -21,7 +24,7 @@ const Radio: React.ForwardRefRenderFunction<RadioFunctions, RadioProps> = (
 
   useImperativeHandle(ref, () => ({ focus }))
 
-  const classnames = styleMap({ ...props, isChecked: input === value })
+  const classnames = styleMap({ ...props, isDisabled, isChecked: input === value })
 
   return (
     <div className={classnames.component}>

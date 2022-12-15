@@ -9,4 +9,8 @@ export interface FormProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface FormFunctions {}
+export interface FormFunctions {
+  enable: () => void
+  disable: () => void
+  isDisabled: boolean
+}

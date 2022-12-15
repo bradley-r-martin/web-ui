@@ -43,7 +43,7 @@ const Input: React.ForwardRefRenderFunction<InputFunctions, InputProps> = (
 
   // const { words, lines, characters } = useVocabulary({ value: input })
 
-  const { isDisabled, enable, disable } = useDisabled({ disabled: false, inherit: false })
+  const { isDisabled, enable, disable } = useDisabled()
 
   const abilities = { enable, disable, focus }
 

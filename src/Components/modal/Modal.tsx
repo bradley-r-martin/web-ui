@@ -39,7 +39,9 @@ const Modal: FunctionComponent<ModalProps> & ModalComposition = (props: ModalPro
             type: 'tween',
           }}
         >
-          {children}
+          <div className='divide-y divide-gray-200 max-h-full overflow-auto max-w-full w-full'>
+            {children}
+          </div>
           {onDismiss ? (
             <span className='absolute top-3 right-3'>
               <Button size='sm' shape='circle' onClick={onDismiss}>

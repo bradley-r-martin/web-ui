@@ -16,7 +16,7 @@ const GalleryB: FunctionComponent<GalleryBProps> = (props) => {
             <div className='text-center relative z-10 w-full'>
               <h2 className='text-2xl text-gray-900 font-medium title-font mb-2'>Shooting Stars</h2>
               <p className='leading-relaxed'>Skateboard +1 mustache fixie paleo lumbersexual.</p>
-              <a className='mt-3 text-indigo-500 inline-flex items-center'>
+              <a className='mt-3 text-sky-500 inline-flex items-center'>
                 Learn More
                 <svg
                   fill='none'
@@ -47,7 +47,7 @@ const GalleryB: FunctionComponent<GalleryBProps> = (props) => {
                   <p className='leading-relaxed'>
                     Skateboard +1 mustache fixie paleo lumbersexual.
                   </p>
-                  <a className='mt-3 text-indigo-500 inline-flex items-center'>
+                  <a className='mt-3 text-sky-500 inline-flex items-center'>
                     Learn More
                     <svg
                       fill='none'
@@ -78,7 +78,7 @@ const GalleryB: FunctionComponent<GalleryBProps> = (props) => {
                   <p className='leading-relaxed'>
                     Skateboard +1 mustache fixie paleo lumbersexual.
                   </p>
-                  <a className='mt-3 text-indigo-500 inline-flex items-center'>
+                  <a className='mt-3 text-sky-500 inline-flex items-center'>
                     Learn More
                     <svg
                       fill='none'

@@ -20,7 +20,9 @@ import { useForm } from '../../Hooks/useForm'
 */
 
 const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: FormProps, ref) => {
-  const { children, locked, debug, ...native } = props
+  const { children, locked, debug, disabled, ...native } = props
+
+  const { enable, disable, isDisabled, DisabledContext } = useDisabled(disabled)
 
   const [state, setState] = useState({})
 
@@ -41,22 +43,24 @@ const Form: React.ForwardRefRenderFunction<FormFunctions, FormProps> = (props: F
     }
   }
 
-  useImperativeHandle(ref, () => ({}))
+  useImperativeHandle(ref, () => ({ enable, disable, isDisabled }))
 
   return (
-    <FormContext.Provider value={{ get, set }}>
-      <FocusTrap active={locked} focusTrapOptions={{ escapeDeactivates: false }}>
-        <div {...native}>{children}</div>
-      </FocusTrap>
-      <Conditional expression={!!debug}>
-        <div
-          className='bg-slate-100 w-full flex-1 p-2 text-xs overflow-auto'
-          style={{ maxHeight: 100 }}
-        >
-          <Syntax json={props?.input ?? state} />
-        </div>
-      </Conditional>
-    </FormContext.Provider>
+    <DisabledContext>
+      <FormContext.Provider value={{ get, set }}>
+        <FocusTrap active={locked} focusTrapOptions={{ escapeDeactivates: false }}>
+          <div {...native}>{children}</div>
+        </FocusTrap>
+        <Conditional expression={!!debug}>
+          <div
+            className='bg-slate-100 w-full flex-1 p-2 text-xs overflow-auto'
+            style={{ maxHeight: 100 }}
+          >
+            <Syntax json={props?.input ?? state} />
+          </div>
+        </Conditional>
+      </FormContext.Provider>
+    </DisabledContext>
   )
 }
 

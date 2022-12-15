@@ -10,6 +10,7 @@ import { TransferFunctions, TransferProps } from './Transfer.Definition'
 import { Button } from '../../button'
 import Conditional from '../../conditional/Conditional'
 import { styleMap } from './Transfer.Styles'
+import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
 import { useIO } from '../../../Hooks/useIO/useIO'
 
 const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps> = (
@@ -19,6 +20,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
   const { ...native } = props
 
   const inputRef = useRef<HTMLInputElement>(null)
+  const { isDisabled } = useDisabled()
 
   function focus() {
     inputRef.current?.focus()
@@ -45,7 +47,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
 
   useImperativeHandle(ref, () => ({ focus }))
 
-  const classnames = styleMap(props)
+  const classnames = styleMap({ ...props, isDisabled })
 
   const selected = input ?? []
 

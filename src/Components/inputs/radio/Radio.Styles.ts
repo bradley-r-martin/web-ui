@@ -28,7 +28,7 @@ const styles = {
 }
 
 export function styleMap(props: any) {
-  const { isChecked, variant = 'outlined' } = props
+  const { isChecked, variant = 'outlined', isDisabled } = props
   return {
     component: classNames({
       [styles.component.base]: true,
@@ -37,6 +37,8 @@ export function styleMap(props: any) {
       [styles.checkbox.base]: true,
       'border-solid rounded-full flex items-center justify-center relative border-2 flex-1 focus-within:ring-opacity-20 w-full items-stretch focus-within:ring-2':
         true,
+      [input.area.interactability.disabled]: isDisabled,
+      [input.area.interactability.enabled]: !isDisabled,
       [input.area.variant.filled]: variant === 'filled',
       [input.area.variant.outlined]: variant === 'outlined',
       [input.area.variant.transparent]: variant === 'transparent',

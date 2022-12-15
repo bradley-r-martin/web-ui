@@ -2,6 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { TextareaFunctions, TextareaProps } from './Textarea.Definition'
 
 import { styleMap } from './Textarea.Styles'
+import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
 import { useIO } from '../../../Hooks/useIO/useIO'
 
 const Textarea: React.ForwardRefRenderFunction<TextareaFunctions, TextareaProps> = (
@@ -12,6 +13,8 @@ const Textarea: React.ForwardRefRenderFunction<TextareaFunctions, TextareaProps>
 
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
+  const { isDisabled } = useDisabled()
+
   function focus() {
     inputRef.current?.focus()
   }
@@ -19,7 +22,7 @@ const Textarea: React.ForwardRefRenderFunction<TextareaFunctions, TextareaProps>
   const [input, output] = useIO({ name: props.id, output: props.output, input: props.input })
   useImperativeHandle(ref, () => ({ focus }))
 
-  const classnames = styleMap(props)
+  const classnames = styleMap({ ...props, isDisabled })
 
   return (
     <div className={classnames.area}>

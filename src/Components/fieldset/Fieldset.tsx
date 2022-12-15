@@ -10,7 +10,7 @@ const Fieldset: React.ForwardRefRenderFunction<FieldsetFunctions, FieldsetProps>
 ) => {
   const { children, disabled, stacked, ...native } = props
 
-  const { isDisabled, enable, disable } = useDisabled({ disabled })
+  const { isDisabled, enable, disable } = useDisabled()
 
   useImperativeHandle(ref, () => ({
     enable,

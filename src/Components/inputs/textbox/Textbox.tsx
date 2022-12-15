@@ -2,6 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { TextboxFunctions, TextboxProps } from './Textbox.Definition'
 
 import { styleMap } from './Textbox.Styles'
+import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
 import { useIO } from '../../../Hooks/useIO/useIO'
 
 const Textbox: React.ForwardRefRenderFunction<TextboxFunctions, TextboxProps> = (
@@ -12,6 +13,8 @@ const Textbox: React.ForwardRefRenderFunction<TextboxFunctions, TextboxProps> = 
 
   const inputRef = useRef<HTMLInputElement>(null)
 
+  const { isDisabled } = useDisabled()
+
   function focus() {
     inputRef.current?.focus()
   }
@@ -20,7 +23,7 @@ const Textbox: React.ForwardRefRenderFunction<TextboxFunctions, TextboxProps> = 
 
   useImperativeHandle(ref, () => ({ focus }))
 
-  const classnames = styleMap(props)
+  const classnames = styleMap({ ...props, isDisabled })
 
   return (
     <div className={classnames.area}>

@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+/* eslint-disable react/display-name */
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 export const DisabledContext = createContext<any>(null)
 
@@ -19,9 +20,12 @@ export function useDisabled(disabled?: boolean) {
     setDisabled(true)
   }
 
-  function context({ children }: any) {
-    return <DisabledContext.Provider value={isDisabled}>{children}</DisabledContext.Provider>
-  }
+  const context = useMemo(
+    () =>
+      ({ children }: any) =>
+        <DisabledContext.Provider value={isDisabled}>{children}</DisabledContext.Provider>,
+    [],
+  )
 
   useEffect(() => {
     // if the direct property changes then update the state to reflect the change.

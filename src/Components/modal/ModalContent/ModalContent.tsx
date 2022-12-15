@@ -8,7 +8,7 @@ const ModalContent: FunctionComponent<ModalContentProps> = (props) => {
   const { children, className, loading, ...native } = props
   return (
     <div className={`bg-gray-50 relative overflow-hidden  ${className}`} {...native}>
-      {/* <NProgress isAnimating={loading}>
+      <NProgress isAnimating={loading}>
         {({ animationDuration, isFinished, progress }) => (
           <div
             style={{
@@ -54,8 +54,7 @@ const ModalContent: FunctionComponent<ModalContentProps> = (props) => {
         >
           {children}
         </motion.div>
-      </div> */}
-      {children}
+      </div>
     </div>
   )
 }

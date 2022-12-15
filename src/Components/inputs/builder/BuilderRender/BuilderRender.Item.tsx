@@ -27,6 +27,8 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
 
   const [selected, setSelected] = useBuilder().selected
 
+  const head = useBuilder().head
+
   const Component = block?.component ?? (() => <></>)
   const controls = useDragControls()
 
@@ -94,7 +96,7 @@ const BuilderRenderItem: FunctionComponent<BuilderRenderItemProps> = (props) => 
         <Frame
           ref={iframe}
           className='min-h-full w-full'
-          initialContent='<!DOCTYPE html><html><head><script src="https://cdn.tailwindcss.com"></script></head><body><div id="mountHere"></div></body></html>'
+          initialContent={`<!DOCTYPE html><html><head><script src="https://cdn.tailwindcss.com"></script>${head}</head><body><div id="mountHere"></div></body></html>`}
           mountTarget='#mountHere'
           height={height}
           contentDidMount={() => resize()}

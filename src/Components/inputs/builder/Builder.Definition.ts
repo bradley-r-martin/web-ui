@@ -18,6 +18,7 @@ export interface BuilderContext {
   library: [boolean, Dispatch<SetStateAction<boolean>>]
   blocks: [BuilderIO, (value: BuilderIO) => void]
   templates: TypeOfBlock[]
+  head?: string
 }
 
 export type BuilderIO = null | { id: string; namespace: string; data: { [key: string]: any } }[]
@@ -31,6 +32,7 @@ export interface BuilderProps
     HasEnhancers,
     HasVariants {
   setup?: React.ReactNode
+  head?: string
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

@@ -1,8 +1,8 @@
-import GalleryB from './GalleryB'
 import { FieldProps } from '../../../Components/field/Field.Definition'
+import GalleryB from './GalleryB'
 import { ImageIO } from '../../../Components/inputs/image/Image.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -36,7 +36,7 @@ export function config(): TypeOfBlock<GalleryBProps> {
         <path
           d='M123 61.5a1.5 1.5 0 011.5-1.5h17a1.5 1.5 0 010 3h-17a1.5 1.5 0 01-1.5-1.5z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <rect
@@ -58,7 +58,7 @@ export function config(): TypeOfBlock<GalleryBProps> {
         <path
           d='M97 110.5a1.5 1.5 0 011.5-1.5h7a1.5 1.5 0 010 3h-7a1.5 1.5 0 01-1.5-1.5z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <rect
@@ -80,7 +80,7 @@ export function config(): TypeOfBlock<GalleryBProps> {
         <path
           d='M162 110.5a1.5 1.5 0 011.5-1.5h7a1.5 1.5 0 010 3h-7a1.5 1.5 0 01-1.5-1.5z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <rect

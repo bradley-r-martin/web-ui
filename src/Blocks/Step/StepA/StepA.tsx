@@ -12,7 +12,7 @@ const StepA: FunctionComponent<StepAProps> = (props) => {
               <div className='h-full w-10 absolute inset-0 flex items-center justify-center'>
                 <div className='h-full w-1 bg-gray-200 pointer-events-none'></div>
               </div>
-              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-sky-500 inline-flex items-center justify-center text-white relative z-10'>
+              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10'>
                 <svg
                   fill='none'
                   stroke='currentColor'
@@ -39,7 +39,7 @@ const StepA: FunctionComponent<StepAProps> = (props) => {
               <div className='h-full w-10 absolute inset-0 flex items-center justify-center'>
                 <div className='h-full w-1 bg-gray-200 pointer-events-none'></div>
               </div>
-              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-sky-500 inline-flex items-center justify-center text-white relative z-10'>
+              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10'>
                 <svg
                   fill='none'
                   stroke='currentColor'
@@ -66,7 +66,7 @@ const StepA: FunctionComponent<StepAProps> = (props) => {
               <div className='h-full w-10 absolute inset-0 flex items-center justify-center'>
                 <div className='h-full w-1 bg-gray-200 pointer-events-none'></div>
               </div>
-              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-sky-500 inline-flex items-center justify-center text-white relative z-10'>
+              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10'>
                 <svg
                   fill='none'
                   stroke='currentColor'
@@ -94,7 +94,7 @@ const StepA: FunctionComponent<StepAProps> = (props) => {
               <div className='h-full w-10 absolute inset-0 flex items-center justify-center'>
                 <div className='h-full w-1 bg-gray-200 pointer-events-none'></div>
               </div>
-              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-sky-500 inline-flex items-center justify-center text-white relative z-10'>
+              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10'>
                 <svg
                   fill='none'
                   stroke='currentColor'
@@ -119,7 +119,7 @@ const StepA: FunctionComponent<StepAProps> = (props) => {
               </div>
             </div>
             <div className='flex relative'>
-              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-sky-500 inline-flex items-center justify-center text-white relative z-10'>
+              <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10'>
                 <svg
                   fill='none'
                   stroke='currentColor'

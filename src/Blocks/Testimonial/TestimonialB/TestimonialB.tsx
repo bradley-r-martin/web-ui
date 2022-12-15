@@ -19,7 +19,7 @@ const TestimonialB: FunctionComponent<TestimonialBProps> = (props) => {
                 90&apos;s cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote
                 bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
               </p>
-              <span className='inline-block h-1 w-10 rounded bg-sky-500 mt-6 mb-4'></span>
+              <span className='inline-block h-1 w-10 rounded bg-blue-500 mt-6 mb-4'></span>
               <h2 className='text-gray-900 font-medium title-font tracking-wider text-sm'>
                 HOLDEN CAULFIELD
               </h2>
@@ -38,7 +38,7 @@ const TestimonialB: FunctionComponent<TestimonialBProps> = (props) => {
                 90&apos;s cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote
                 bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
               </p>
-              <span className='inline-block h-1 w-10 rounded bg-sky-500 mt-6 mb-4'></span>
+              <span className='inline-block h-1 w-10 rounded bg-blue-500 mt-6 mb-4'></span>
               <h2 className='text-gray-900 font-medium title-font tracking-wider text-sm'>
                 ALPER KAMU
               </h2>
@@ -57,7 +57,7 @@ const TestimonialB: FunctionComponent<TestimonialBProps> = (props) => {
                 90&apos;s cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote
                 bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
               </p>
-              <span className='inline-block h-1 w-10 rounded bg-sky-500 mt-6 mb-4'></span>
+              <span className='inline-block h-1 w-10 rounded bg-blue-500 mt-6 mb-4'></span>
               <h2 className='text-gray-900 font-medium title-font tracking-wider text-sm'>
                 HENRY LETHAM
               </h2>

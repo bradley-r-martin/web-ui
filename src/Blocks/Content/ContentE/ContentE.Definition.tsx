@@ -1,8 +1,8 @@
 import ContentE from './ContentE'
 import { FieldProps } from '../../../Components/field/Field.Definition'
 import { ImageIO } from '../../../Components/inputs/image/Image.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -36,7 +36,7 @@ export function config(): TypeOfBlock<ContentEProps> {
         <path
           d='M106 115a2 2 0 012-2h20a2 2 0 110 4h-20a2 2 0 01-2-2z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <path

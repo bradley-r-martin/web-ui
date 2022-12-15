@@ -1,7 +1,7 @@
 import FeatureB from './FeatureB'
 import { FieldProps } from '../../../Components/field/Field.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -37,7 +37,7 @@ export function config(): TypeOfBlock<FeatureBProps> {
           d='M43 101.5a1.5 1.5 0 011.5-1.5h20a1.5 1.5 0 010 3h-20a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='25'
@@ -67,7 +67,7 @@ export function config(): TypeOfBlock<FeatureBProps> {
           d='M122 101.5a1.5 1.5 0 011.5-1.5h20a1.5 1.5 0 010 3h-20a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='104'
@@ -97,7 +97,7 @@ export function config(): TypeOfBlock<FeatureBProps> {
           d='M201 101.5a1.5 1.5 0 011.5-1.5h20a1.5 1.5 0 010 3h-20a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='183'
@@ -137,7 +137,7 @@ export function config(): TypeOfBlock<FeatureBProps> {
           rx='2'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></rect>
       </svg>
     ),

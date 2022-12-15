@@ -1,7 +1,7 @@
 import FeatureH from './FeatureH'
 import { FieldProps } from '../../../Components/field/Field.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -426,7 +426,7 @@ export function config(): TypeOfBlock<FeatureHProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></rect>
       </svg>

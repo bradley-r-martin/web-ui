@@ -1,7 +1,7 @@
 import FeatureE from './FeatureE'
 import { FieldProps } from '../../../Components/field/Field.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -37,7 +37,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           rx='1.5'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></rect>
         <circle
           cx='28'
@@ -45,7 +45,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           r='3'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></circle>
         <rect
           x='98'
@@ -67,7 +67,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           d='M25 103a1 1 0 011-1h11a1 1 0 010 2H26a1 1 0 01-1-1z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='34'
@@ -95,7 +95,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           r='3'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></circle>
         <path
           d='M104 93a1 1 0 011-1h54a1 1 0 010 2h-54a1 1 0 01-1-1zM104 98a1 1 0 011-1h44a1 1 0 010 2h-44a1 1 0 01-1-1z'
@@ -107,7 +107,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           d='M104 103a1 1 0 011-1h11a1 1 0 010 2h-11a1 1 0 01-1-1z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='113'
@@ -135,7 +135,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           r='3'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></circle>
         <path
           d='M183 93a1 1 0 011-1h54a1 1 0 010 2h-54a1 1 0 01-1-1zM183 98a1 1 0 011-1h44a1 1 0 010 2h-44a1 1 0 01-1-1z'
@@ -147,7 +147,7 @@ export function config(): TypeOfBlock<FeatureEProps> {
           d='M183 103a1 1 0 011-1h11a1 1 0 010 2h-11a1 1 0 01-1-1z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-sky-500'
+          className='text-blue-500'
         ></path>
         <rect
           x='192'

@@ -1,7 +1,7 @@
-import TestimonialB from './TestimonialB'
 import { FieldProps } from '../../../Components/field/Field.Definition'
-import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import React from 'react'
+import TestimonialB from './TestimonialB'
+import { TextboxIO } from '../../../Components/inputs/textbox/Textbox.Definition'
 import TypeOfBlock from '../../../Types/TypeOfBlock'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -40,7 +40,7 @@ export function config(): TypeOfBlock<TestimonialBProps> {
         <path
           d='M44 94.5a1.5 1.5 0 011.5-1.5h13.38a1.5 1.5 0 010 3H45.5a1.5 1.5 0 01-1.5-1.5z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <circle
@@ -72,7 +72,7 @@ export function config(): TypeOfBlock<TestimonialBProps> {
         <path
           d='M125 94.5a1.5 1.5 0 011.5-1.5h13.38a1.5 1.5 0 010 3H126.5a1.5 1.5 0 01-1.5-1.5z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <circle
@@ -104,7 +104,7 @@ export function config(): TypeOfBlock<TestimonialBProps> {
         <path
           d='M206 94.5a1.5 1.5 0 011.5-1.5h13.38a1.5 1.5 0 010 3H207.5a1.5 1.5 0 01-1.5-1.5z'
           // fill="var(--main-500)"
-          className='text-sky-500'
+          className='text-blue-500'
           fill='currentColor'
         ></path>
         <circle

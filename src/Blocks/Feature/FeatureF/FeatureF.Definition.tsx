@@ -36,7 +36,7 @@ export function config(): TypeOfBlock<FeatureFProps> {
         <path
           d='M102 33a1 1 0 011-1h14a1 1 0 010 2h-14a1 1 0 01-1-1z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <rect
@@ -66,7 +66,7 @@ export function config(): TypeOfBlock<FeatureFProps> {
         <path
           d='M102 103a1 1 0 011-1h14a1 1 0 010 2h-14a1 1 0 01-1-1z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <rect
@@ -96,7 +96,7 @@ export function config(): TypeOfBlock<FeatureFProps> {
         <path
           d='M80 68a1 1 0 011-1h14a1 1 0 110 2H81a1 1 0 01-1-1z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <rect
@@ -116,7 +116,7 @@ export function config(): TypeOfBlock<FeatureFProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
         <path

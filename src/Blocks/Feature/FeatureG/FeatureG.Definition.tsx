@@ -34,7 +34,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
         <path
           d='M77 65a2 2 0 11-4 0 2 2 0 014 0z'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -52,7 +52,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
         <path
           d='M143 65a2 2 0 11-4 0 2 2 0 014 0z'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -70,7 +70,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
         <path
           d='M77 81a2 2 0 11-4 0 2 2 0 014 0z'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -88,7 +88,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
         <path
           d='M143 81a2 2 0 11-4 0 2 2 0 014 0z'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -106,7 +106,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
         <path
           d='M77 97a2 2 0 11-4 0 2 2 0 014 0z'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path
@@ -124,7 +124,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
         <path
           d='M143 97a2 2 0 11-4 0 2 2 0 014 0z'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <rect
@@ -174,7 +174,7 @@ export function config(): TypeOfBlock<FeatureGProps> {
           height='10'
           rx='2'
           // fill='var(--main-500)'
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
       </svg>

@@ -77,7 +77,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
                   onClick={() => {
                     add(option.id)
                   }}
-                  className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-blue-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex'
+                  className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex'
                 >
                   {props?.item ? props.item(option) : option.text}
                 </button>
@@ -118,7 +118,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
                   <button
                     type='button'
                     onClick={() => remove(option.id)}
-                    className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-blue-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex flex-1 items-center justify-between'
+                    className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex flex-1 items-center justify-between'
                   >
                     {props?.item ? props.item(option) : option.text}
                   </button>

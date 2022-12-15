@@ -36,7 +36,7 @@ export function config(): TypeOfBlock<ContentEProps> {
         <path
           d='M106 115a2 2 0 012-2h20a2 2 0 110 4h-20a2 2 0 01-2-2z'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></path>
         <path

@@ -31,7 +31,7 @@ export function config(): TypeOfBlock<StepAProps> {
           d='M29 30.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <path
           d='M34 35a1 1 0 011-1h54a1 1 0 110 2H35a1 1 0 01-1-1z'
@@ -75,7 +75,7 @@ export function config(): TypeOfBlock<StepAProps> {
           d='M29 74.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <path
           d='M34 79a1 1 0 011-1h54a1 1 0 110 2H35a1 1 0 01-1-1z'
@@ -97,7 +97,7 @@ export function config(): TypeOfBlock<StepAProps> {
           d='M29 96.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <path
           d='M34 101a1 1 0 011-1h54a1 1 0 010 2H35a1 1 0 01-1-1z'
@@ -119,7 +119,7 @@ export function config(): TypeOfBlock<StepAProps> {
           d='M29 118.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <path
           d='M34 123a1 1 0 011-1h54a1 1 0 010 2H35a1 1 0 01-1-1z'

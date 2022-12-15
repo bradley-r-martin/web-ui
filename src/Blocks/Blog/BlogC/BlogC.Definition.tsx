@@ -74,7 +74,7 @@ export function config(): TypeOfBlock<BlogCProps> {
           rx='2'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></rect>
         <rect
           x='23'
@@ -84,7 +84,7 @@ export function config(): TypeOfBlock<BlogCProps> {
           rx='1'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></rect>
         <path
           d='M121.5 93a.5.5 0 010 1h-101a.5.5 0 010-1h101z'
@@ -174,7 +174,7 @@ export function config(): TypeOfBlock<BlogCProps> {
           rx='2'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></rect>
         <rect
           x='147'
@@ -184,7 +184,7 @@ export function config(): TypeOfBlock<BlogCProps> {
           rx='1'
           // fill="var(--main-500)"
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></rect>
         <path
           d='M245.5 93a.5.5 0 010 1h-101a.5.5 0 010-1h101z'

@@ -98,7 +98,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
+          className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[0]}
         />
         <span>/</span>
@@ -107,7 +107,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
+          className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[1]}
         />
         <span>/</span>
@@ -116,7 +116,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
+          className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[2]}
         />
       </div>
@@ -126,7 +126,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
+          className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[3]}
         />
         <span>:</span>
@@ -135,18 +135,18 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
-          className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
+          className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input}`}
           {...parts[4]}
         />
       </div>
-      {/* <div className='focus-within:bg-blue-100 rounded flex space-x-1'>
+      {/* <div className='focus-within:bg-sky-100 rounded flex space-x-1'>
         <input
           key={0}
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
           className={
-            'focus:border-b-blue-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
+            'focus:border-b-sky-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
           }
           {...parts[0]}
         />
@@ -157,7 +157,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
           className={
-            'focus:border-b-blue-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
+            'focus:border-b-sky-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
           }
           {...parts[1]}
         />
@@ -168,19 +168,19 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
           className={
-            'focus:border-b-blue-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
+            'focus:border-b-sky-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
           }
           {...parts[2]}
         />
       </div>
-      <div className='focus-within:bg-blue-100 rounded flex space-x-1'>
+      <div className='focus-within:bg-sky-100 rounded flex space-x-1'>
         <input
           key={3}
           type='text'
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
           className={
-            'focus:border-b-blue-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
+            'focus:border-b-sky-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
           }
           {...parts[3]}
         />
@@ -191,7 +191,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           autoComplete='off'
           style={{ caretColor: 'transparent' }}
           className={
-            'focus:border-b-blue-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
+            'focus:border-b-sky-500 border-b-2 border-b-transparent bg-transparent focus:text-black px-1 text-center selection:bg-transparent w-full outline-none'
           }
           {...parts[4]}
         />
@@ -202,7 +202,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           <input
             ref={refs.ref(0)}
             type='text'
-            className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+            className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
             {...native}
             value={date.day}
             maxLength={2}
@@ -249,7 +249,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           <input
             ref={refs.ref(1)}
             type='text'
-            className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+            className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
             {...native}
             value={date.month}
             maxLength={2}
@@ -296,7 +296,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
           <input
             ref={refs.ref(2)}
             type='text'
-            className={`focus:bg-blue-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
+            className={`focus:bg-sky-100 rounded focus:text-black px-1 text-center selection:bg-transparent ${classnames.input} ${className}`}
             {...native}
             value={date.year}
             maxLength={4}
@@ -337,7 +337,7 @@ const Date: React.ForwardRefRenderFunction<DateFunctions, DateProps> = (props: D
       </span> */}
       <button
         onClick={() => alert('calendar')}
-        className='p-0.5 px-1 hover:bg-blue-500 hover:text-white rounded cursor-pointer active:transform active:scale-95 focus-visible:outline-1 focus-visible:outline-dashed'
+        className='p-0.5 px-1 hover:bg-sky-500 hover:text-white rounded cursor-pointer active:transform active:scale-95 focus-visible:outline-1 focus-visible:outline-dashed'
       >
         <CalculatorIcon className='h-4 w-4' />
       </button>

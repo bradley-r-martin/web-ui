@@ -3,7 +3,7 @@ import { input } from '../../../Design/tokens/input'
 
 const styles = {
   input: {
-    base: 'outline-offset-4 focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-blue-800',
+    base: 'outline-offset-4 focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-sky-800',
     preview: {
       base: 'h-full w-full flex items-center justify-center relative',
     },

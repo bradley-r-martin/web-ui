@@ -28,7 +28,7 @@ const ModalContent: FunctionComponent<ModalContentProps> = (props) => {
                 width: '100%',
                 zIndex: 1031,
               }}
-              className='bg-blue-500'
+              className='bg-sky-500'
             >
               <div
                 style={{

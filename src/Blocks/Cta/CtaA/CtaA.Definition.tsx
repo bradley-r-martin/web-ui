@@ -48,7 +48,7 @@ export function config(): TypeOfBlock<CtaAProps> {
           height='10'
           rx='2'
           // fill="var(--main-500)"
-          className='text-blue-500'
+          className='text-sky-500'
           fill='currentColor'
         ></rect>
       </svg>

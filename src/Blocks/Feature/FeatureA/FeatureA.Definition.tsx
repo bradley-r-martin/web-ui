@@ -57,7 +57,7 @@ export function config(): TypeOfBlock<FeatureAProps> {
           d='M38 108.5a1.5 1.5 0 011.5-1.5h13a1.5 1.5 0 010 3h-13a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <rect
           x='38'
@@ -87,7 +87,7 @@ export function config(): TypeOfBlock<FeatureAProps> {
           d='M117 108.5a1.5 1.5 0 011.5-1.5h13a1.5 1.5 0 010 3h-13a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <rect
           x='117'
@@ -117,7 +117,7 @@ export function config(): TypeOfBlock<FeatureAProps> {
           d='M196 108.5a1.5 1.5 0 011.5-1.5h13a1.5 1.5 0 010 3h-13a1.5 1.5 0 01-1.5-1.5z'
           // fill='var(--main-500)'
           fill='currentColor'
-          className='text-blue-500'
+          className='text-sky-500'
         ></path>
         <rect
           x='196'

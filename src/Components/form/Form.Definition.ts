@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface FormProps extends React.HTMLProps<HTMLDivElement> {
+export interface FormProps extends React.HTMLProps<HTMLFormElement> {
   children?: React.ReactNode
   input?: object
   output?: (state: object) => void

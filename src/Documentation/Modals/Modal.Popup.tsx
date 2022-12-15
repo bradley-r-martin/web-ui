@@ -17,7 +17,7 @@ const ModalPopup: FunctionComponent = () => {
   }
   return (
     <>
-      <Button onClick={() => open()}>Open</Button>
+      <Button onClick={() => open()}>Popup</Button>
       <Conditional expression={isOpen}>
         <Modal size='lg:w-1/3'>
           <Modal.Content loading={isLoading}>Content</Modal.Content>

@@ -17,7 +17,7 @@ const ModalHero: FunctionComponent = () => {
   }
   return (
     <>
-      <Button onClick={() => open()}>Open</Button>
+      <Button onClick={() => open()}>Hero</Button>
       <Conditional expression={isOpen}>
         <Modal size='lg:w-1/3'>
           <div>

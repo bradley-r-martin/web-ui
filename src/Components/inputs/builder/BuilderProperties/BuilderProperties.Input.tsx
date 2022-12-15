@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import useBuilder, { useBlock } from '../Builder.context'
 
 import { Button } from '../../../button'
+import { Field } from '../../../field'
 import Input from '../../Input'
 import { InputProps } from '../../Input.Definition'
 import _ from 'lodash'
@@ -28,7 +29,7 @@ const BuilderPropertiesInput: FunctionComponent<BuilderPropertiesInputProps> = (
 
   return (
     <div className='text-xs'>
-      <Input {...input} input={_.get(blocks, `[${index}].data.${input?.name}`)} output={output} />
+      <Field {...input} input={_.get(blocks, `[${index}].data.${input?.name}`)} output={output} />
     </div>
   )
 }

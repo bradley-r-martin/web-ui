@@ -21,7 +21,7 @@ const ModalFooter: FunctionComponent<ModalFooterProps> = (props) => {
   }
 
   return (
-    <div className={`flex p-3 pb-10 lg:pb-3 space-x-2 ${alignment()} ${className}`} {...native}>
+    <div className={`flex p-3 space-x-2 ${alignment()} ${className}`} {...native}>
       {children}
     </div>
   )

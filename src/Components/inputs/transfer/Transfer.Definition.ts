@@ -8,6 +8,13 @@ import React from 'react'
 import Transfer from './Transfer'
 
 export type TransferIO = null | string[]
+
+export interface TransferContext {
+  item?: (input: unknown) => React.ReactNode
+
+  io: [TransferIO, (value: TransferIO) => void]
+}
+
 export interface TransferProps
   extends HasIO<TransferIO>,
     HasId,
@@ -16,6 +23,7 @@ export interface TransferProps
     HasEnhancers,
     HasVariants {
   item?: (input: unknown) => React.ReactNode
+  orderable?: boolean
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

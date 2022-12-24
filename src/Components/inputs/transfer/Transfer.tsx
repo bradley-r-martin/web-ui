@@ -1,3 +1,4 @@
+import { AnimatePresence, Reorder, motion } from 'framer-motion'
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -9,6 +10,7 @@ import { TransferFunctions, TransferProps } from './Transfer.Definition'
 
 import { Button } from '../../button'
 import Conditional from '../../conditional/Conditional'
+import TransferItem from './TransferItem/TransferItem'
 import { styleMap } from './Transfer.Styles'
 import { useDisabled } from '../../../Hooks/useDisabled/useDisabled'
 import { useIO } from '../../../Hooks/useIO/useIO'
@@ -17,7 +19,7 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
   props: TransferProps,
   ref,
 ) => {
-  const { ...native } = props
+  const { orderable, ...native } = props
 
   const inputRef = useRef<HTMLInputElement>(null)
   const { isDisabled } = useDisabled()
@@ -66,24 +68,18 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
         </div>
       </div>
       <div className='flex items-stretch overflow-hidden flex-1'>
-        <div className='flex-1 p-2 flex flex-col space-y-2 overflow-auto'>
+        <Reorder.Group
+          axis='y'
+          values={input ?? []}
+          onReorder={() => undefined}
+          className='flex-1 p-2 flex flex-col space-y-2 overflow-auto'
+        >
           {search(filter)
             .filter((option) => !selected.includes(option.id))
             .map((option) => {
-              return (
-                <button
-                  type='button'
-                  key={option.id}
-                  onClick={() => {
-                    add(option.id)
-                  }}
-                  className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex'
-                >
-                  {props?.item ? props.item(option) : option.text}
-                </button>
-              )
+              return <TransferItem key={option.id} remove={add} item={props.item} option={option} />
             })}
-        </div>
+        </Reorder.Group>
         <div className='flex  flex-col justify-center relative'>
           <div className='py-1.5 px-1 bg-slate-100 rounded-full space-y-1 shadow-inner flex flex-col justify-center relative z-10'>
             <span>
@@ -109,26 +105,34 @@ const Transfer: React.ForwardRefRenderFunction<TransferFunctions, TransferProps>
           </div>
           <div className='bg-slate-300 absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-px'></div>
         </div>
-        <div className='flex-1 p-2 flex flex-col space-y-2 overflow-auto'>
+
+        <Reorder.Group
+          axis='y'
+          values={selected}
+          onReorder={output}
+          className='flex-1 p-2 flex flex-col space-y-2 overflow-auto'
+        >
           {search(filter)
             .filter((option) => selected.includes(option.id))
+            .sort(
+              orderable
+                ? (a, b) => {
+                    return selected.indexOf(a.id) - selected.indexOf(b.id)
+                  }
+                : undefined,
+            )
             .map((option) => {
               return (
-                <div key={option.id} className='flex items-center justify-between space-x-2'>
-                  <button
-                    type='button'
-                    onClick={() => remove(option.id)}
-                    className='bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 transition ease-in-out duration-100 rounded flex flex-1 items-center justify-between'
-                  >
-                    {props?.item ? props.item(option) : option.text}
-                  </button>
-                  <button type='button' className='cursor-move'>
-                    <QueueListIcon className='h-4 w-4' />
-                  </button>
-                </div>
+                <TransferItem
+                  reorderable={orderable}
+                  key={option.id}
+                  remove={remove}
+                  item={props.item}
+                  option={option}
+                />
               )
             })}
-        </div>
+        </Reorder.Group>
       </div>
     </div>
   )

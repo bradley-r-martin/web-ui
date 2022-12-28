@@ -9,9 +9,9 @@ export interface ModalProps {
   overlay?: React.FunctionComponent
   container?: React.FunctionComponent
   children: React.ReactNode
+  anchored?: 'top' | 'bottom'
   size?: any
   onDismiss?: () => void
-  isOpen?: boolean
 }
 
 export interface ModalComposition {

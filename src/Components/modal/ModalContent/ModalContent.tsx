@@ -31,8 +31,9 @@ const ModalContent: FunctionComponent<ModalContentProps> = (props) => {
               className='bg-sky-500'
             >
               <div
+                className='shadow-sky-300'
                 style={{
-                  boxShadow: '0 0 10px #29d, 0 0 5px #29d',
+                  boxShadow: '0 0 10px var(--tw-shadow-color), 0 0 5px var(--tw-shadow-color)',
                   display: 'block',
                   height: '100%',
                   opacity: 1,

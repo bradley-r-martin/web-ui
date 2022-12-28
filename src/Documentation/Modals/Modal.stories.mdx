@@ -1,5 +1,3 @@
-<!-- Modal.stories.mdx -->
-
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
 
 import Modal from '../../Components/modal/Modal'
@@ -7,6 +5,7 @@ import Button from '../../Components/button/Button'
 import ModalHero from './Modal.Hero'
 import ModalPopup from './Modal.Popup'
 import ModalWindow from './Modal.Window'
+import ModalAnchoredTop from './Modal.AnchoredTop'
 
 <Meta title='Components/Modal' argTypes={{}} component={Modal} />
 
@@ -24,4 +23,10 @@ import { Modal } from '@bradley-r-martin/web-ui'
   <ModalHero />
   <ModalWindow />
   <ModalPopup />
+</Canvas>
+
+## Anchored
+
+<Canvas>
+  <ModalAnchoredTop />
 </Canvas>

@@ -30,7 +30,7 @@ const TransferItem: React.ForwardRefRenderFunction<TransferItemFunctions, Transf
         y,
       }}
       key={option.id}
-      className='cursor-pointer bg-slate-50 px-2 py-1 hover:bg-sky-100 active:bg-sky-500 active:text-white active:scale-95 rounded flex items-center justify-between'
+      className='cursor-pointer bg-slate-50 px-2 py-1 hover:bg-sky-50 active:bg-sky-500 active:text-white active:scale-95 rounded flex items-center justify-between'
       onClick={() => remove(option.id)}
     >
       <div className='flex items-center justify-between space-x-2 flex-1'>

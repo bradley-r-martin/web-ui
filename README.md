@@ -28,3 +28,12 @@ NPM
 ```sh
 npm i @bradley-r-martin/web-ui@latest
 ```
+
+### Pattern
+
+1. Folder structure domain context
+   Hooks
+   Contexts
+   Components - this is hard but.
+
+2.

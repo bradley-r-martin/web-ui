@@ -1,6 +1,8 @@
 import { Button, Modal } from '../../expose'
 import React, { FunctionComponent, useState } from 'react'
 
+import LoadingBar from '../../Components/loading-bar/LoadingBar'
+
 const ModalAnchoredTop: FunctionComponent = () => {
   const [isOpen, setOpen] = useState(false)
   const [isLoading, setLoading] = useState(false)
@@ -21,6 +23,10 @@ const ModalAnchoredTop: FunctionComponent = () => {
         ),
       }}
     >
+      <LoadingBar loading>
+        <div className='h-1'></div>
+      </LoadingBar>
+
       <div className='w-96 h-96'>
         <Button onClick={() => open()}>Popup</Button>
         {isOpen ? (
